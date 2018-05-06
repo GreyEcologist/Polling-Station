@@ -1,0 +1,6 @@
+framework module Pods_PollingStation {
+  umbrella header "Pods-PollingStation-umbrella.h"
+
+  export *
+  module * { export * }
+}
