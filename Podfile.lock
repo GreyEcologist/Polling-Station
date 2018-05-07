@@ -16,12 +16,14 @@ PODS:
   - AWSUserPoolsSignIn (2.6.17):
     - AWSAuthCore (= 2.6.17)
     - AWSCognitoIdentityProvider (= 2.6.17)
+  - FoldingCell (3.0.6)
 
 DEPENDENCIES:
   - AWSAuthUI (~> 2.6.13)
   - AWSMobileClient (~> 2.6.13)
   - AWSPinpoint (~> 2.6.13)
   - AWSUserPoolsSignIn (~> 2.6.13)
+  - FoldingCell (~> 3.0.6)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -33,6 +35,7 @@ SPEC REPOS:
     - AWSMobileClient
     - AWSPinpoint
     - AWSUserPoolsSignIn
+    - FoldingCell
 
 SPEC CHECKSUMS:
   AWSAuthCore: 15a48ce8153e6b7b7df763e8df9d993c7797957e
@@ -43,7 +46,8 @@ SPEC CHECKSUMS:
   AWSMobileClient: 7b8dd4ef7a7d5c08f258b547d061c3c2018d32d8
   AWSPinpoint: e00eaa2a04a1c8176f1481391b32e43279471dd1
   AWSUserPoolsSignIn: ba2e21e15527ba955194031fd40f02e1490630fe
+  FoldingCell: 4848ec8a2056d5751bfb710df14521fc64d48ad7
 
-PODFILE CHECKSUM: d368a6aa3e4b4e516f1b353dce90339c918a5962
+PODFILE CHECKSUM: 7bb180eeb47ca2615d2499876b79fb02390355b1
 
 COCOAPODS: 1.5.0

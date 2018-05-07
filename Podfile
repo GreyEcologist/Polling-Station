@@ -6,5 +6,5 @@ target :'PollingStation' do
     pod 'AWSAuthUI', '~> 2.6.13'
     pod 'AWSMobileClient', '~> 2.6.13'
     pod 'AWSPinpoint', '~> 2.6.13'
-    pod 'FoldingCell'
+    pod 'FoldingCell', '~> 3.0.6'
 end
