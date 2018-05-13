@@ -13,8 +13,11 @@
 		000F52CB209E940F00273B33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 000F52CA209E940F00273B33 /* Assets.xcassets */; };
 		000F52CE209E940F00273B33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 000F52CC209E940F00273B33 /* LaunchScreen.storyboard */; };
 		0060658B209FD65D004BBC44 /* DemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0060658A209FD65D004BBC44 /* DemoCell.swift */; };
-		00A8EEF9209E9DB5007DBF74 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 00A8EEF8209E9DB5007DBF74 /* awsconfiguration.json */; };
-		847489AB328988C8F4BDBD65 /* Pods_PollingStation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 885E1B1879BC6FFFF64979B9 /* Pods_PollingStation.framework */; };
+		00CD16D720A799DF004C236C /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 00CD16D620A799DF004C236C /* awsconfiguration.json */; };
+		00CD16D920A79A88004C236C /* CoinDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD16D820A79A88004C236C /* CoinDescription.swift */; };
+		00CD16DE20A7B5ED004C236C /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD16DB20A7B5EC004C236C /* Empty.swift */; };
+		00CD16DF20A7B5ED004C236C /* DEVCoinGateClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD16DD20A7B5ED004C236C /* DEVCoinGateClient.swift */; };
+		03CC995EFE43E7CD299E7DF5 /* Pods_PollingStation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E164FCD1DC7F3CBCD54489C7 /* Pods_PollingStation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,10 +29,15 @@
 		000F52CD209E940F00273B33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		000F52CF209E940F00273B33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0060658A209FD65D004BBC44 /* DemoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoCell.swift; sourceTree = "<group>"; };
-		00A8EEF8209E9DB5007DBF74 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
-		0483AC9798688A71D7ECDE17 /* Pods-PollingStation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingStation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PollingStation/Pods-PollingStation.debug.xcconfig"; sourceTree = "<group>"; };
-		885E1B1879BC6FFFF64979B9 /* Pods_PollingStation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PollingStation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC2E3280DB2ACB0B25E2AE26 /* Pods-PollingStation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingStation.release.xcconfig"; path = "Pods/Target Support Files/Pods-PollingStation/Pods-PollingStation.release.xcconfig"; sourceTree = "<group>"; };
+		00CD16D620A799DF004C236C /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		00CD16D820A79A88004C236C /* CoinDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinDescription.swift; sourceTree = "<group>"; };
+		00CD16DA20A7B5EC004C236C /* Bridging_Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bridging_Header.h; sourceTree = "<group>"; };
+		00CD16DB20A7B5EC004C236C /* Empty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Empty.swift; sourceTree = "<group>"; };
+		00CD16DC20A7B5ED004C236C /* AWSApiGatewayBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSApiGatewayBridge.h; sourceTree = "<group>"; };
+		00CD16DD20A7B5ED004C236C /* DEVCoinGateClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DEVCoinGateClient.swift; sourceTree = "<group>"; };
+		031D2FC8A0B3277132EB1F8E /* Pods-PollingStation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingStation.release.xcconfig"; path = "Pods/Target Support Files/Pods-PollingStation/Pods-PollingStation.release.xcconfig"; sourceTree = "<group>"; };
+		5CFA195C5424DB9251B75912 /* Pods-PollingStation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingStation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PollingStation/Pods-PollingStation.debug.xcconfig"; sourceTree = "<group>"; };
+		E164FCD1DC7F3CBCD54489C7 /* Pods_PollingStation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PollingStation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				847489AB328988C8F4BDBD65 /* Pods_PollingStation.framework in Frameworks */,
+				03CC995EFE43E7CD299E7DF5 /* Pods_PollingStation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -49,8 +57,8 @@
 			children = (
 				000F52C0209E940C00273B33 /* PollingStation */,
 				000F52BF209E940C00273B33 /* Products */,
-				A357DDBB179D02FF197B613D /* Pods */,
-				165EC3149B28F3BA3B90934E /* Frameworks */,
+				DFB68A137E2FE12EDB5D66AA /* Pods */,
+				6AC55D522E2D2C9466D36135 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,29 +75,34 @@
 			children = (
 				000F52C1209E940C00273B33 /* AppDelegate.swift */,
 				000F52C3209E940C00273B33 /* MasterViewController.swift */,
+				00CD16D820A79A88004C236C /* CoinDescription.swift */,
 				0060658A209FD65D004BBC44 /* DemoCell.swift */,
+				00CD16DC20A7B5ED004C236C /* AWSApiGatewayBridge.h */,
+				00CD16DA20A7B5EC004C236C /* Bridging_Header.h */,
+				00CD16DD20A7B5ED004C236C /* DEVCoinGateClient.swift */,
+				00CD16DB20A7B5EC004C236C /* Empty.swift */,
 				000F52C7209E940C00273B33 /* Main.storyboard */,
 				000F52CA209E940F00273B33 /* Assets.xcassets */,
 				000F52CC209E940F00273B33 /* LaunchScreen.storyboard */,
-				00A8EEF8209E9DB5007DBF74 /* awsconfiguration.json */,
+				00CD16D620A799DF004C236C /* awsconfiguration.json */,
 				000F52CF209E940F00273B33 /* Info.plist */,
 			);
 			path = PollingStation;
 			sourceTree = "<group>";
 		};
-		165EC3149B28F3BA3B90934E /* Frameworks */ = {
+		6AC55D522E2D2C9466D36135 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				885E1B1879BC6FFFF64979B9 /* Pods_PollingStation.framework */,
+				E164FCD1DC7F3CBCD54489C7 /* Pods_PollingStation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A357DDBB179D02FF197B613D /* Pods */ = {
+		DFB68A137E2FE12EDB5D66AA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				0483AC9798688A71D7ECDE17 /* Pods-PollingStation.debug.xcconfig */,
-				CC2E3280DB2ACB0B25E2AE26 /* Pods-PollingStation.release.xcconfig */,
+				5CFA195C5424DB9251B75912 /* Pods-PollingStation.debug.xcconfig */,
+				031D2FC8A0B3277132EB1F8E /* Pods-PollingStation.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -101,11 +114,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 000F52D2209E940F00273B33 /* Build configuration list for PBXNativeTarget "PollingStation" */;
 			buildPhases = (
-				006C7FCB1142629F39CA5D0F /* [CP] Check Pods Manifest.lock */,
+				304C6C1E29E7872D6F76A5E9 /* [CP] Check Pods Manifest.lock */,
 				000F52BA209E940C00273B33 /* Sources */,
 				000F52BB209E940C00273B33 /* Frameworks */,
 				000F52BC209E940C00273B33 /* Resources */,
-				DB385C256110B6874E7D06EA /* [CP] Embed Pods Frameworks */,
+				3387149C25873DDD64C2ECBE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,7 +167,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00A8EEF9209E9DB5007DBF74 /* awsconfiguration.json in Resources */,
+				00CD16D720A799DF004C236C /* awsconfiguration.json in Resources */,
 				000F52CE209E940F00273B33 /* LaunchScreen.storyboard in Resources */,
 				000F52CB209E940F00273B33 /* Assets.xcassets in Resources */,
 				000F52C9209E940C00273B33 /* Main.storyboard in Resources */,
@@ -164,7 +177,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		006C7FCB1142629F39CA5D0F /* [CP] Check Pods Manifest.lock */ = {
+		304C6C1E29E7872D6F76A5E9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -182,18 +195,20 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DB385C256110B6874E7D06EA /* [CP] Embed Pods Frameworks */ = {
+		3387149C25873DDD64C2ECBE /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-PollingStation/Pods-PollingStation-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AWSAPIGateway/AWSAPIGateway.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSAuthCore/AWSAuthCore.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSAuthUI/AWSAuthUI.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProvider/AWSCognitoIdentityProvider.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCognitoIdentityProviderASF/AWSCognitoIdentityProviderASF.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSCore/AWSCore.framework",
+				"${BUILT_PRODUCTS_DIR}/AWSDynamoDB/AWSDynamoDB.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSMobileClient/AWSMobileClient.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSPinpoint/AWSPinpoint.framework",
 				"${BUILT_PRODUCTS_DIR}/AWSUserPoolsSignIn/AWSUserPoolsSignIn.framework",
@@ -201,11 +216,13 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAPIGateway.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAuthCore.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSAuthUI.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProvider.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCognitoIdentityProviderASF.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSDynamoDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSMobileClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSPinpoint.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSUserPoolsSignIn.framework",
@@ -223,7 +240,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00CD16DF20A7B5ED004C236C /* DEVCoinGateClient.swift in Sources */,
 				000F52C4209E940C00273B33 /* MasterViewController.swift in Sources */,
+				00CD16D920A79A88004C236C /* CoinDescription.swift in Sources */,
+				00CD16DE20A7B5ED004C236C /* Empty.swift in Sources */,
 				0060658B209FD65D004BBC44 /* DemoCell.swift in Sources */,
 				000F52C2209E940C00273B33 /* AppDelegate.swift in Sources */,
 			);
@@ -367,7 +387,7 @@
 		};
 		000F52D3209E940F00273B33 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0483AC9798688A71D7ECDE17 /* Pods-PollingStation.debug.xcconfig */;
+			baseConfigurationReference = 5CFA195C5424DB9251B75912 /* Pods-PollingStation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -386,7 +406,7 @@
 		};
 		000F52D4209E940F00273B33 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC2E3280DB2ACB0B25E2AE26 /* Pods-PollingStation.release.xcconfig */;
+			baseConfigurationReference = 031D2FC8A0B3277132EB1F8E /* Pods-PollingStation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

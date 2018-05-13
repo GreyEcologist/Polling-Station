@@ -10,6 +10,7 @@ import UIKit
 import AWSAuthCore
 import AWSAuthUI
 import FoldingCell
+import AWSDynamoDB
 
 class MasterViewController: UITableViewController {
 
@@ -28,11 +29,10 @@ class MasterViewController: UITableViewController {
                 if error != nil {
                     print("Error occurred: \(String(describing: error))")
                 } else {
-                    print("Sign in successful")
                 }
             })
         } else {
-            setup()
+            self.setup()
         }
     }
     
@@ -95,6 +95,7 @@ class MasterViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FoldingCell", for: indexPath) as! FoldingCell
         let durations: [TimeInterval] = [0.26, 0.2, 0.2]
+        cell.containerView.layer.cornerRadius = 2
         cell.durationsForExpandedState = durations
         cell.durationsForCollapsedState = durations
         return cell
