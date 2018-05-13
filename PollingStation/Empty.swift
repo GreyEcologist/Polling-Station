@@ -17,7 +17,7 @@
 import Foundation
 import AWSCore
 
- 
+
 public class Empty : AWSModel {
     
     

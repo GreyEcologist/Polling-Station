@@ -16,8 +16,8 @@
 		00CD16D720A799DF004C236C /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 00CD16D620A799DF004C236C /* awsconfiguration.json */; };
 		00CD16D920A79A88004C236C /* CoinDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD16D820A79A88004C236C /* CoinDescription.swift */; };
 		00CD16DE20A7B5ED004C236C /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD16DB20A7B5EC004C236C /* Empty.swift */; };
-		00CD16DF20A7B5ED004C236C /* DEVCoinGateClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD16DD20A7B5ED004C236C /* DEVCoinGateClient.swift */; };
-		03CC995EFE43E7CD299E7DF5 /* Pods_PollingStation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E164FCD1DC7F3CBCD54489C7 /* Pods_PollingStation.framework */; };
+		00CD16E620A90295004C236C /* NEVCoinGateClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD16E520A90295004C236C /* NEVCoinGateClient.swift */; };
+		99495357F6417BC5892C4781 /* Pods_PollingStation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D54E60DC4343488FA7332C7 /* Pods_PollingStation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,13 +31,13 @@
 		0060658A209FD65D004BBC44 /* DemoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoCell.swift; sourceTree = "<group>"; };
 		00CD16D620A799DF004C236C /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		00CD16D820A79A88004C236C /* CoinDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinDescription.swift; sourceTree = "<group>"; };
-		00CD16DA20A7B5EC004C236C /* Bridging_Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bridging_Header.h; sourceTree = "<group>"; };
 		00CD16DB20A7B5EC004C236C /* Empty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Empty.swift; sourceTree = "<group>"; };
 		00CD16DC20A7B5ED004C236C /* AWSApiGatewayBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSApiGatewayBridge.h; sourceTree = "<group>"; };
-		00CD16DD20A7B5ED004C236C /* DEVCoinGateClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DEVCoinGateClient.swift; sourceTree = "<group>"; };
-		031D2FC8A0B3277132EB1F8E /* Pods-PollingStation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingStation.release.xcconfig"; path = "Pods/Target Support Files/Pods-PollingStation/Pods-PollingStation.release.xcconfig"; sourceTree = "<group>"; };
-		5CFA195C5424DB9251B75912 /* Pods-PollingStation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingStation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PollingStation/Pods-PollingStation.debug.xcconfig"; sourceTree = "<group>"; };
-		E164FCD1DC7F3CBCD54489C7 /* Pods_PollingStation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PollingStation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		00CD16E220A8F895004C236C /* PollingStation-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PollingStation-Bridging-Header.h"; sourceTree = "<group>"; };
+		00CD16E520A90295004C236C /* NEVCoinGateClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NEVCoinGateClient.swift; sourceTree = "<group>"; };
+		1AA6F6066C77AE0A6ABE8406 /* Pods-PollingStation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingStation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PollingStation/Pods-PollingStation.debug.xcconfig"; sourceTree = "<group>"; };
+		3D54E60DC4343488FA7332C7 /* Pods_PollingStation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PollingStation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E317B5AA70DDBDB4019E6316 /* Pods-PollingStation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingStation.release.xcconfig"; path = "Pods/Target Support Files/Pods-PollingStation/Pods-PollingStation.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03CC995EFE43E7CD299E7DF5 /* Pods_PollingStation.framework in Frameworks */,
+				99495357F6417BC5892C4781 /* Pods_PollingStation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,8 +57,8 @@
 			children = (
 				000F52C0209E940C00273B33 /* PollingStation */,
 				000F52BF209E940C00273B33 /* Products */,
-				DFB68A137E2FE12EDB5D66AA /* Pods */,
-				6AC55D522E2D2C9466D36135 /* Frameworks */,
+				AF4E90E55DC255C5252DFC2C /* Pods */,
+				B69577F6C0678C1F56BDE317 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,8 +78,8 @@
 				00CD16D820A79A88004C236C /* CoinDescription.swift */,
 				0060658A209FD65D004BBC44 /* DemoCell.swift */,
 				00CD16DC20A7B5ED004C236C /* AWSApiGatewayBridge.h */,
-				00CD16DA20A7B5EC004C236C /* Bridging_Header.h */,
-				00CD16DD20A7B5ED004C236C /* DEVCoinGateClient.swift */,
+				00CD16E220A8F895004C236C /* PollingStation-Bridging-Header.h */,
+				00CD16E520A90295004C236C /* NEVCoinGateClient.swift */,
 				00CD16DB20A7B5EC004C236C /* Empty.swift */,
 				000F52C7209E940C00273B33 /* Main.storyboard */,
 				000F52CA209E940F00273B33 /* Assets.xcassets */,
@@ -90,21 +90,21 @@
 			path = PollingStation;
 			sourceTree = "<group>";
 		};
-		6AC55D522E2D2C9466D36135 /* Frameworks */ = {
+		AF4E90E55DC255C5252DFC2C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E164FCD1DC7F3CBCD54489C7 /* Pods_PollingStation.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		DFB68A137E2FE12EDB5D66AA /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				5CFA195C5424DB9251B75912 /* Pods-PollingStation.debug.xcconfig */,
-				031D2FC8A0B3277132EB1F8E /* Pods-PollingStation.release.xcconfig */,
+				1AA6F6066C77AE0A6ABE8406 /* Pods-PollingStation.debug.xcconfig */,
+				E317B5AA70DDBDB4019E6316 /* Pods-PollingStation.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		B69577F6C0678C1F56BDE317 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3D54E60DC4343488FA7332C7 /* Pods_PollingStation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -114,11 +114,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 000F52D2209E940F00273B33 /* Build configuration list for PBXNativeTarget "PollingStation" */;
 			buildPhases = (
-				304C6C1E29E7872D6F76A5E9 /* [CP] Check Pods Manifest.lock */,
+				513F5D154927C940BA9BC1AD /* [CP] Check Pods Manifest.lock */,
 				000F52BA209E940C00273B33 /* Sources */,
 				000F52BB209E940C00273B33 /* Frameworks */,
 				000F52BC209E940C00273B33 /* Resources */,
-				3387149C25873DDD64C2ECBE /* [CP] Embed Pods Frameworks */,
+				CC3CCA5FE35A6275E5B4D20A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -141,6 +141,7 @@
 				TargetAttributes = {
 					000F52BD209E940C00273B33 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 					};
 				};
 			};
@@ -177,7 +178,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		304C6C1E29E7872D6F76A5E9 /* [CP] Check Pods Manifest.lock */ = {
+		513F5D154927C940BA9BC1AD /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -195,7 +196,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		3387149C25873DDD64C2ECBE /* [CP] Embed Pods Frameworks */ = {
+		CC3CCA5FE35A6275E5B4D20A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -240,7 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00CD16DF20A7B5ED004C236C /* DEVCoinGateClient.swift in Sources */,
+				00CD16E620A90295004C236C /* NEVCoinGateClient.swift in Sources */,
 				000F52C4209E940C00273B33 /* MasterViewController.swift in Sources */,
 				00CD16D920A79A88004C236C /* CoinDescription.swift in Sources */,
 				00CD16DE20A7B5ED004C236C /* Empty.swift in Sources */,
@@ -328,6 +329,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -381,15 +383,17 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		000F52D3209E940F00273B33 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5CFA195C5424DB9251B75912 /* Pods-PollingStation.debug.xcconfig */;
+			baseConfigurationReference = 1AA6F6066C77AE0A6ABE8406 /* Pods-PollingStation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6AEA7P6XSJ;
 				INFOPLIST_FILE = PollingStation/Info.plist;
@@ -399,6 +403,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.GreyEcology.PollingStation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/PollingStation-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -406,9 +412,10 @@
 		};
 		000F52D4209E940F00273B33 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 031D2FC8A0B3277132EB1F8E /* Pods-PollingStation.release.xcconfig */;
+			baseConfigurationReference = E317B5AA70DDBDB4019E6316 /* Pods-PollingStation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6AEA7P6XSJ;
 				INFOPLIST_FILE = PollingStation/Info.plist;
@@ -418,6 +425,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.GreyEcology.PollingStation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/PollingStation-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

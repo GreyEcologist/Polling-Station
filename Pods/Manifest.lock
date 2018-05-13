@@ -23,8 +23,9 @@ PODS:
   - FoldingCell (3.0.6)
 
 DEPENDENCIES:
-  - AWSAPIGateway
+  - AWSAPIGateway (~> 2.6.13)
   - AWSAuthUI (~> 2.6.13)
+  - AWSCore (~> 2.6.13)
   - AWSDynamoDB (~> 2.6.13)
   - AWSMobileClient (~> 2.6.13)
   - AWSPinpoint (~> 2.6.13)
@@ -32,7 +33,7 @@ DEPENDENCIES:
   - FoldingCell (~> 3.0.6)
 
 SPEC REPOS:
-  https://github.com/CocoaPods/Specs.git:
+  https://github.com/cocoapods/specs.git:
     - AWSAPIGateway
     - AWSAuthCore
     - AWSAuthUI
@@ -58,6 +59,6 @@ SPEC CHECKSUMS:
   AWSUserPoolsSignIn: ba2e21e15527ba955194031fd40f02e1490630fe
   FoldingCell: 4848ec8a2056d5751bfb710df14521fc64d48ad7
 
-PODFILE CHECKSUM: 63a922c40bf5923bca9c07ae7b3a71b46cd7e4f1
+PODFILE CHECKSUM: 8b5437abc0c361eba51036e86c99dfa2c7e08be0
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.2

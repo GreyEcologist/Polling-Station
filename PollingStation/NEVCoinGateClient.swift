@@ -17,12 +17,12 @@
 import AWSCore
 import AWSAPIGateway
 
-public class DEVCoinGateClient: AWSAPIGatewayClient {
+public class NEVCoinGateClient: AWSAPIGatewayClient {
 
-	static let AWSInfoClientKey = "DEVCoinGateClient"
+	static let AWSInfoClientKey = "NEVCoinGateClient"
 
 	private static let _serviceClients = AWSSynchronizedMutableDictionary()
-	private static let _defaultClient:DEVCoinGateClient = {
+	private static let _defaultClient:NEVCoinGateClient = {
 		var serviceConfiguration: AWSServiceConfiguration? = nil
         let serviceInfo = AWSInfo.default().defaultServiceInfo(AWSInfoClientKey)
         if let serviceInfo = serviceInfo {
@@ -33,7 +33,7 @@ public class DEVCoinGateClient: AWSAPIGatewayClient {
             serviceConfiguration = AWSServiceConfiguration(region: .Unknown, credentialsProvider: nil)
         }
         
-        return DEVCoinGateClient(configuration: serviceConfiguration!)
+        return NEVCoinGateClient(configuration: serviceConfiguration!)
 	}()
     
 	/**
@@ -51,14 +51,14 @@ public class DEVCoinGateClient: AWSAPIGatewayClient {
 	
 	 Then call the following to get the default service client:
 	
-	     let serviceClient = DEVCoinGateClient.default()
+	     let serviceClient = NEVCoinGateClient.default()
 
-     Alternatively, this configuration could also be set in the `info.plist` file of your app under `AWS` dictionary with a configuration dictionary by name `DEVCoinGateClient`.
+     Alternatively, this configuration could also be set in the `info.plist` file of your app under `AWS` dictionary with a configuration dictionary by name `NEVCoinGateClient`.
 	
 	 @return The default service client.
 	 */ 
 	 
-	public class func `default`() -> DEVCoinGateClient{
+	public class func `default`() -> NEVCoinGateClient{
 		return _defaultClient
 	}
 
@@ -70,7 +70,7 @@ public class DEVCoinGateClient: AWSAPIGatewayClient {
 	     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 	         let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "YourIdentityPoolId")
 	         let configuration = AWSServiceConfiguration(region: .USWest2, credentialsProvider: credentialProvider)
-	         DEVCoinGateClient.registerClient(withConfiguration: configuration, forKey: "USWest2DEVCoinGateClient")
+	         NEVCoinGateClient.registerClient(withConfiguration: configuration, forKey: "USWest2NEVCoinGateClient")
 	
 	         return true
 	     }
@@ -78,7 +78,7 @@ public class DEVCoinGateClient: AWSAPIGatewayClient {
 	 Then call the following to get the service client:
 	
 	
-	     let serviceClient = DEVCoinGateClient.client(forKey: "USWest2DEVCoinGateClient")
+	     let serviceClient = NEVCoinGateClient.client(forKey: "USWest2NEVCoinGateClient")
 	
 	 @warning After calling this method, do not modify the configuration object. It may cause unspecified behaviors.
 	
@@ -87,7 +87,7 @@ public class DEVCoinGateClient: AWSAPIGatewayClient {
 	 */
 	
 	public class func registerClient(withConfiguration configuration: AWSServiceConfiguration, forKey key: String){
-		_serviceClients.setObject(DEVCoinGateClient(configuration: configuration), forKey: key  as NSString);
+		_serviceClients.setObject(NEVCoinGateClient(configuration: configuration), forKey: key  as NSString);
 	}
 
 	/**
@@ -98,21 +98,21 @@ public class DEVCoinGateClient: AWSAPIGatewayClient {
 	     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 	         let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "YourIdentityPoolId")
 	         let configuration = AWSServiceConfiguration(region: .USWest2, credentialsProvider: credentialProvider)
-	         DEVCoinGateClient.registerClient(withConfiguration: configuration, forKey: "USWest2DEVCoinGateClient")
+	         NEVCoinGateClient.registerClient(withConfiguration: configuration, forKey: "USWest2NEVCoinGateClient")
 	
 	         return true
 	     }
 	
 	 Then call the following to get the service client:
 	 
-	 	let serviceClient = DEVCoinGateClient.client(forKey: "USWest2DEVCoinGateClient")
+	 	let serviceClient = NEVCoinGateClient.client(forKey: "USWest2NEVCoinGateClient")
 	 
 	 @param key A string to identify the service client.
 	 @return An instance of the service client.
 	 */
-	public class func client(forKey key: String) -> DEVCoinGateClient {
+	public class func client(forKey key: String) -> NEVCoinGateClient {
 		objc_sync_enter(self)
-		if let client: DEVCoinGateClient = _serviceClients.object(forKey: key) as? DEVCoinGateClient {
+		if let client: NEVCoinGateClient = _serviceClients.object(forKey: key) as? NEVCoinGateClient {
 			objc_sync_exit(self)
 		    return client
 		}
@@ -120,10 +120,10 @@ public class DEVCoinGateClient: AWSAPIGatewayClient {
 		let serviceInfo = AWSInfo.default().defaultServiceInfo(AWSInfoClientKey)
 		if let serviceInfo = serviceInfo {
 			let serviceConfiguration = AWSServiceConfiguration(region: serviceInfo.region, credentialsProvider: serviceInfo.cognitoCredentialsProvider)
-			DEVCoinGateClient.registerClient(withConfiguration: serviceConfiguration!, forKey: key)
+			NEVCoinGateClient.registerClient(withConfiguration: serviceConfiguration!, forKey: key)
 		}
 		objc_sync_exit(self)
-		return _serviceClients.object(forKey: key) as! DEVCoinGateClient;
+		return _serviceClients.object(forKey: key) as! NEVCoinGateClient;
 	}
 
 	/**
@@ -145,7 +145,7 @@ public class DEVCoinGateClient: AWSAPIGatewayClient {
 	    if URLString.hasSuffix("/") {
 	        URLString = URLString.substring(to: URLString.index(before: URLString.endIndex))
 	    }
-	    //self.configuration.endpoint = AWSEndpoint(region: configuration.regionType, service: .APIGateway, url: URL(string: URLString))
+	    self.configuration.endpoint = AWSEndpoint(region: configuration.regionType, service: .APIGateway, url: URL(string: URLString))
 	    let signer: AWSSignatureV4Signer = AWSSignatureV4Signer(credentialsProvider: configuration.credentialsProvider, endpoint: self.configuration.endpoint)
 	    if let endpoint = self.configuration.endpoint {
 	    	self.configuration.baseURL = endpoint.url
@@ -168,8 +168,10 @@ public class DEVCoinGateClient: AWSAPIGatewayClient {
 	            ]
 	    
 	    let queryParameters:[String:Any] = [:]
-	    return self.invoke(AWSAPIGatewayRequest.init(httpMethod: "GET", urlString: "/getallcoins", queryParameters: queryParameters, headerParameters: headerParameters, httpBody: nil)
-            ) as! AWSTask<Empty>
+	    
+	    let pathParameters:[String:Any] = [:]
+	    
+	    return self.invokeHTTPRequest("GET", urlString: "/getallcoins", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: Empty.self) as! AWSTask<Empty>
 	}
 
 

@@ -33,6 +33,21 @@ class MasterViewController: UITableViewController {
             })
         } else {
             self.setup()
+            
+            let client: NEVCoinGateClient = NEVCoinGateClient.default()
+            client.apiKey = "znjpFhER2fa7nI7A2RISi7gXDa9AhIWb6jRcGNHt"
+            client.getallcoinsGet().continueWith{ (task: AWSTask?) -> AnyObject? in
+                if let error = task?.error {
+                    print("Error occurred: \(error)")
+                    return nil
+                }
+                
+                if let result = task?.result {
+                    print("result: \(result)")
+                }
+                
+                return nil
+            }
         }
     }
     
