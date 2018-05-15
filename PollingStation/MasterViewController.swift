@@ -43,7 +43,7 @@ class MasterViewController: UITableViewController {
                 }
                 
                 if let result = task?.result {
-                    print("result: \(result)")
+                    print("result: \(result.debugDescription)")
                 }
                 
                 return nil

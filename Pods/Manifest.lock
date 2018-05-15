@@ -1,4 +1,5 @@
 PODS:
+  - Alertift (3.2)
   - AWSAPIGateway (2.6.17):
     - AWSCore (= 2.6.17)
   - AWSAuthCore (2.6.17):
@@ -23,6 +24,7 @@ PODS:
   - FoldingCell (3.0.6)
 
 DEPENDENCIES:
+  - Alertift (~> 3.0)
   - AWSAPIGateway (~> 2.6.13)
   - AWSAuthUI (~> 2.6.13)
   - AWSCore (~> 2.6.13)
@@ -34,6 +36,7 @@ DEPENDENCIES:
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - Alertift
     - AWSAPIGateway
     - AWSAuthCore
     - AWSAuthUI
@@ -47,6 +50,7 @@ SPEC REPOS:
     - FoldingCell
 
 SPEC CHECKSUMS:
+  Alertift: df0df24a557e47360180092f5f3fceb675c96b51
   AWSAPIGateway: 0bf1a841609dbcabe94f2203ff98aa0f5f37f2f1
   AWSAuthCore: 15a48ce8153e6b7b7df763e8df9d993c7797957e
   AWSAuthUI: c275f3be411076b0aa33237cb9efc596c16aa631
@@ -59,6 +63,6 @@ SPEC CHECKSUMS:
   AWSUserPoolsSignIn: ba2e21e15527ba955194031fd40f02e1490630fe
   FoldingCell: 4848ec8a2056d5751bfb710df14521fc64d48ad7
 
-PODFILE CHECKSUM: 8b5437abc0c361eba51036e86c99dfa2c7e08be0
+PODFILE CHECKSUM: 5a10fcc0e42b0788249c01fa14bdb8d81b20f545
 
 COCOAPODS: 1.5.2

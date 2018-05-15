@@ -10,4 +10,5 @@ target :'PollingStation' do
     pod 'AWSMobileClient', '~> 2.6.13'
     pod 'AWSPinpoint', '~> 2.6.13'
     pod 'FoldingCell', '~> 3.0.6'
+    pod 'Alertift', '~> 3.0'
 end
