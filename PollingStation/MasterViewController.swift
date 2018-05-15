@@ -11,6 +11,8 @@ import AWSAuthCore
 import AWSAuthUI
 import FoldingCell
 import AWSDynamoDB
+import Alertift
+
 
 class MasterViewController: UITableViewController {
 
@@ -19,10 +21,12 @@ class MasterViewController: UITableViewController {
     let kOpenCellHeight: CGFloat = 488
     let kRowsCount = 20
     var cellHeights: [CGFloat] = []
-
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(setToPeru(notification:)), name: .voteAlert, object: nil)
         
         if !AWSSignInManager.sharedInstance().isLoggedIn {
             AWSAuthUIViewController.presentViewController(with: self.navigationController!, configuration: nil, completionHandler: { (provider: AWSSignInProvider, error: Error?) in
@@ -75,7 +79,21 @@ class MasterViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
     }
+    
+    @objc func setToPeru(notification: NSNotification) {
+        self.showAlert()
+    }
 
+    func showAlert() {
+        Alertift.alert(title: "Vote", message: "Vote!")
+            .action(.default("A"))
+            .action(.default("B"))
+            .action(.default("C"))
+            .action(.default("D"))
+            .action(.default("E"))
+            .action(.default("F"))
+            .show(on: self)
+    }
 
     // MARK: - Table View
 
@@ -141,6 +159,9 @@ class MasterViewController: UITableViewController {
             tableView.endUpdates()
         }, completion: nil)
     }
+}
 
+public extension Notification.Name {
+    static let voteAlert = Notification.Name("voteAlert")
 }
 

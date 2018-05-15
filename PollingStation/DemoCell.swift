@@ -9,10 +9,12 @@
 import FoldingCell
 import UIKit
 
+
 class DemoCell: FoldingCell {
 
     @IBOutlet var closeNumberLabel: UILabel!
     @IBOutlet var openNumberLabel: UILabel!
+    
 
     var number: Int = 0 {
         didSet {
@@ -38,6 +40,7 @@ class DemoCell: FoldingCell {
 extension DemoCell {
 
     @IBAction func buttonHandler(_: AnyObject) {
-        print("tap")
+        NotificationCenter.default.post(name: .voteAlert, object: nil)
     }
 }
+
