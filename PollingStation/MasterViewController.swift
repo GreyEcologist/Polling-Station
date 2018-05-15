@@ -86,12 +86,12 @@ class MasterViewController: UITableViewController {
 
     func showAlert() {
         Alertift.alert(title: "Vote", message: "Vote!")
-            .action(.default("A"))
-            .action(.default("B"))
-            .action(.default("C"))
-            .action(.default("D"))
-            .action(.default("E"))
-            .action(.default("F"))
+            .actions(["A+", "A", "B", "C", "F"])
+            .action(.cancel("Cancel"))
+            .finally { action, index, arg in
+                if action.style == .cancel { return }
+                print("sinaloa \(index)")
+            }
             .show(on: self)
     }
 
