@@ -12,14 +12,12 @@ import UIKit
 
 class DemoCell: FoldingCell {
 
-    @IBOutlet var closeNumberLabel: UILabel!
     @IBOutlet var openNumberLabel: UILabel!
     
 
-    var number: Int = 0 {
+    var number: Int = 1 {
         didSet {
-            closeNumberLabel.text = String(number)
-            openNumberLabel.text = String(number)
+            openNumberLabel.text = "1"
         }
     }
 
