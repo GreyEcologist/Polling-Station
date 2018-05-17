@@ -295,10 +295,22 @@
                                                                 <constraint firstAttribute="height" constant="1" id="0ri-i9-DMh"/>
                                                             </constraints>
                                                         </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Banking the unbanked." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0r-X4-bRL" userLabel="W 85th St, New York, 10024">
+                                                            <rect key="frame" x="79" y="36" width="234" height="32"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="32" id="vgh-Ke-cXk"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
+                                                        <constraint firstItem="i0r-X4-bRL" firstAttribute="trailing" secondItem="GwE-aA-ZPv" secondAttribute="trailing" id="0lX-fL-cFy"/>
                                                         <constraint firstItem="GwE-aA-ZPv" firstAttribute="top" secondItem="ymC-rT-imX" secondAttribute="bottom" constant="15" id="0tn-3c-tfa"/>
+                                                        <constraint firstItem="i0r-X4-bRL" firstAttribute="centerY" secondItem="ymC-rT-imX" secondAttribute="centerY" id="7VA-Sv-v8S"/>
+                                                        <constraint firstItem="i0r-X4-bRL" firstAttribute="leading" secondItem="ymC-rT-imX" secondAttribute="trailing" constant="8" symbolic="YES" id="G3e-hI-fZQ"/>
                                                         <constraint firstItem="GwE-aA-ZPv" firstAttribute="centerY" secondItem="tvp-WA-ter" secondAttribute="centerY" constant="10" id="NfE-Dl-NXj"/>
                                                         <constraint firstAttribute="height" constant="165" id="aVt-y8-CNG"/>
                                                         <constraint firstItem="GwE-aA-ZPv" firstAttribute="leading" secondItem="tvp-WA-ter" secondAttribute="leading" constant="22" id="kPk-Qh-FWK"/>
@@ -308,9 +320,21 @@
                                                 </view>
                                                 <view tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ahq-w8-Vz3" userLabel="ThirdContainerView" customClass="RotatedView" customModule="FoldingCell">
                                                     <rect key="frame" x="0.0" y="330" width="335" height="72"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uug-2n-yks">
+                                                            <rect key="frame" x="14" y="-71" width="313" height="143"/>
+                                                            <string key="text">This is the same dependency as before. Nothing changed other than bumping versions. The only other thing that we changed was resolving some analytic calls. The only other thing that we changed was resolving some analytic calls. The only sdfsdf sdf sdfs sdf sdfs fsdf sd.</string>
+                                                            <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="15"/>
+                                                            <color key="textColor" red="0.13424258959999999" green="0.1825802859" blue="0.20891704520000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
+                                                        <constraint firstItem="Uug-2n-yks" firstAttribute="bottom" secondItem="ahq-w8-Vz3" secondAttribute="bottomMargin" constant="8" id="4eg-2c-gMQ"/>
+                                                        <constraint firstItem="Uug-2n-yks" firstAttribute="top" secondItem="ahq-w8-Vz3" secondAttribute="top" constant="-71" id="DeY-Ve-7ig"/>
                                                         <constraint firstAttribute="height" constant="72" id="UD9-Z9-PKf"/>
+                                                        <constraint firstItem="Uug-2n-yks" firstAttribute="leading" secondItem="ahq-w8-Vz3" secondAttribute="leadingMargin" constant="6" id="Z9D-U9-XXC"/>
                                                     </constraints>
                                                 </view>
                                                 <view tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mqe-oP-1DT" userLabel="BottomContainerView" customClass="RotatedView" customModule="FoldingCell">
@@ -391,9 +415,11 @@
                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="X1c-kd-thc" secondAttribute="trailing" constant="20" id="5D9-KK-yKq"/>
+                                        <constraint firstAttribute="trailing" secondItem="Uug-2n-yks" secondAttribute="trailing" constant="28" id="6zN-iE-t0y"/>
                                         <constraint firstItem="X1c-kd-thc" firstAttribute="leading" secondItem="CJo-9B-SdL" secondAttribute="leading" constant="20" id="9W9-hh-2RX"/>
                                         <constraint firstItem="kqJ-1V-XfE" firstAttribute="top" secondItem="CJo-9B-SdL" secondAttribute="top" constant="7" identifier="ForegroundViewTop" id="9Wq-uG-KA2"/>
                                         <constraint firstItem="X1c-kd-thc" firstAttribute="top" secondItem="CJo-9B-SdL" secondAttribute="top" constant="180" identifier="ContainerViewTop" id="9xj-cX-Gty"/>
+                                        <constraint firstItem="tvp-WA-ter" firstAttribute="leading" secondItem="CJo-9B-SdL" secondAttribute="leading" constant="20" id="DMX-Sp-Jpr"/>
                                         <constraint firstAttribute="trailing" secondItem="kqJ-1V-XfE" secondAttribute="trailing" constant="20" id="psG-5g-0oD"/>
                                         <constraint firstItem="kqJ-1V-XfE" firstAttribute="leading" secondItem="CJo-9B-SdL" secondAttribute="leading" constant="20" id="sV3-bF-YfA"/>
                                     </constraints>
