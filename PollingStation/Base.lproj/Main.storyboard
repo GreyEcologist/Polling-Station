@@ -81,66 +81,58 @@
                                                         <constraint firstItem="yjZ-Gu-1GQ" firstAttribute="top" secondItem="JQ6-bG-X9w" secondAttribute="bottom" constant="20" id="vvu-9r-9aa"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Ripio Credit Network" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="FN1-An-3Pn" userLabel="W 85th St, New York, 10024">
-                                                    <rect key="frame" x="108" y="8" width="217" height="33"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ripio Credit Network" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="FN1-An-3Pn" userLabel="W 85th St, New York, 10024">
+                                                    <rect key="frame" x="97" y="7" width="220" height="33"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="33" id="k1Y-HT-KHD"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="20"/>
                                                     <color key="textColor" red="0.20000000000000001" green="0.23921568630000001" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PMh-qV-Un3" userLabel="RightView">
-                                                    <rect key="frame" x="105" y="110.5" width="230" height="48"/>
-                                                    <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNo-KG-PAC">
-                                                            <rect key="frame" x="0.0" y="-14" width="222" height="62"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="222" id="8GS-eL-89C"/>
-                                                                <constraint firstAttribute="height" constant="62" id="BTy-pc-qMb"/>
-                                                            </constraints>
-                                                            <string key="text">This is the same dependency as before. Nothing changed other than bumping versions. The only other thing that we changed was resolving some analytic calls.</string>
-                                                            <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="15"/>
-                                                            <color key="textColor" red="0.13424258959999999" green="0.1825802859" blue="0.20891704520000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                    </subviews>
-                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0gq-KN-gXr" userLabel="line">
+                                                    <rect key="frame" x="104" y="89" width="192" height="1"/>
+                                                    <color key="backgroundColor" red="0.13725490200000001" green="0.59215686270000001" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
-                                                        <constraint firstItem="hNo-KG-PAC" firstAttribute="leading" secondItem="PMh-qV-Un3" secondAttribute="leading" id="5LC-nk-2JG"/>
-                                                        <constraint firstAttribute="bottom" secondItem="hNo-KG-PAC" secondAttribute="bottom" id="AXi-SH-H8R"/>
-                                                        <constraint firstItem="hNo-KG-PAC" firstAttribute="top" secondItem="PMh-qV-Un3" secondAttribute="top" constant="-14" id="fD6-9d-oip"/>
-                                                        <constraint firstItem="hNo-KG-PAC" firstAttribute="trailing" secondItem="PMh-qV-Un3" secondAttribute="trailingMargin" id="ksm-Oj-Ofr"/>
+                                                        <constraint firstAttribute="height" constant="1" id="6AU-Z5-Dha"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Banking the unbanked." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="9uG-QB-qC2" userLabel="W 85th St, New York, 10024">
-                                                    <rect key="frame" x="108" y="49" width="217" height="32"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNo-KG-PAC">
+                                                    <rect key="frame" x="97" y="95" width="230" height="62"/>
+                                                    <string key="text">This is the same dependency as before. Nothing changed other than bumping versions. The only other thing that we changed was resolving some analytic calls.</string>
+                                                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="15"/>
+                                                    <color key="textColor" red="0.13424258959999999" green="0.1825802859" blue="0.20891704520000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Banking the unbanked." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9uG-QB-qC2" userLabel="W 85th St, New York, 10024">
+                                                    <rect key="frame" x="97" y="48" width="220" height="32"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="32" id="8fc-MN-1Bf"/>
+                                                        <constraint firstAttribute="height" constant="32" id="ViO-Ez-pVT"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="hNo-KG-PAC" secondAttribute="trailing" constant="8" id="0I0-pK-ZsN"/>
+                                                <constraint firstItem="FN1-An-3Pn" firstAttribute="top" secondItem="kqJ-1V-XfE" secondAttribute="top" constant="7" id="10B-C5-Hb2"/>
+                                                <constraint firstItem="hNo-KG-PAC" firstAttribute="bottom" secondItem="kqJ-1V-XfE" secondAttribute="bottomMargin" id="1cW-xq-sHC"/>
                                                 <constraint firstAttribute="height" constant="165" id="1le-fQ-yY3"/>
-                                                <constraint firstItem="9uG-QB-qC2" firstAttribute="top" secondItem="FN1-An-3Pn" secondAttribute="bottom" constant="8" symbolic="YES" id="DV8-UQ-WVi"/>
-                                                <constraint firstItem="FN1-An-3Pn" firstAttribute="top" secondItem="kqJ-1V-XfE" secondAttribute="top" constant="28" id="HrQ-n6-n8b"/>
+                                                <constraint firstItem="FN1-An-3Pn" firstAttribute="leading" secondItem="bFo-P2-jPK" secondAttribute="trailing" constant="9" id="5wk-8R-xl4"/>
+                                                <constraint firstItem="hNo-KG-PAC" firstAttribute="top" secondItem="0gq-KN-gXr" secondAttribute="bottom" constant="5" id="A1P-Fk-R6W"/>
+                                                <constraint firstItem="9uG-QB-qC2" firstAttribute="top" secondItem="FN1-An-3Pn" secondAttribute="bottom" constant="8" symbolic="YES" id="Aqp-JT-tSh"/>
+                                                <constraint firstAttribute="trailing" secondItem="0gq-KN-gXr" secondAttribute="trailing" constant="39" id="Eru-wd-zFw"/>
                                                 <constraint firstAttribute="bottom" secondItem="bFo-P2-jPK" secondAttribute="bottom" id="Ink-M4-xl6"/>
-                                                <constraint firstAttribute="trailing" secondItem="FN1-An-3Pn" secondAttribute="trailing" constant="10" id="Onp-K5-nqe"/>
-                                                <constraint firstItem="FN1-An-3Pn" firstAttribute="leading" secondItem="9uG-QB-qC2" secondAttribute="leading" id="XXp-f7-xGF"/>
-                                                <constraint firstItem="FN1-An-3Pn" firstAttribute="leading" secondItem="kqJ-1V-XfE" secondAttribute="leading" constant="124" id="edC-dy-2NK"/>
-                                                <constraint firstItem="PMh-qV-Un3" firstAttribute="top" secondItem="9uG-QB-qC2" secondAttribute="bottom" constant="19" id="g2x-8f-jNL"/>
+                                                <constraint firstItem="9uG-QB-qC2" firstAttribute="leading" secondItem="hNo-KG-PAC" secondAttribute="leading" id="LGI-9Z-XdF"/>
+                                                <constraint firstItem="0gq-KN-gXr" firstAttribute="leading" secondItem="kqJ-1V-XfE" secondAttribute="leading" constant="104" id="W09-eh-W5e"/>
                                                 <constraint firstItem="bFo-P2-jPK" firstAttribute="top" secondItem="kqJ-1V-XfE" secondAttribute="top" id="gRJ-ms-wJ5"/>
-                                                <constraint firstItem="FN1-An-3Pn" firstAttribute="trailing" secondItem="9uG-QB-qC2" secondAttribute="trailing" id="gc9-LM-AEH"/>
                                                 <constraint firstItem="bFo-P2-jPK" firstAttribute="leading" secondItem="kqJ-1V-XfE" secondAttribute="leading" id="hG1-XK-2Zb"/>
-                                                <constraint firstAttribute="trailing" secondItem="PMh-qV-Un3" secondAttribute="trailing" id="vCu-G6-q00"/>
-                                            </constraints>
-                                        </view>
-                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0gq-KN-gXr" userLabel="line">
-                                            <rect key="frame" x="129" y="96" width="192" height="1"/>
-                                            <color key="backgroundColor" red="0.39607843139999999" green="0.40000000000000002" blue="0.39607843139999999" alpha="0.20135663009999999" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="1" id="6AU-Z5-Dha"/>
+                                                <constraint firstItem="9uG-QB-qC2" firstAttribute="trailing" secondItem="hNo-KG-PAC" secondAttribute="trailing" constant="-10" id="k7a-BS-Brr"/>
+                                                <constraint firstItem="hNo-KG-PAC" firstAttribute="top" secondItem="9uG-QB-qC2" secondAttribute="bottom" constant="15" id="ka8-jK-bb5"/>
+                                                <constraint firstItem="FN1-An-3Pn" firstAttribute="trailing" secondItem="9uG-QB-qC2" secondAttribute="trailing" id="lBm-pn-mNi"/>
+                                                <constraint firstItem="FN1-An-3Pn" firstAttribute="leading" secondItem="9uG-QB-qC2" secondAttribute="leading" id="pc4-qH-zw7"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X1c-kd-thc" userLabel="Container">
