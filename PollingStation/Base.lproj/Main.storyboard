@@ -434,8 +434,22 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <outlet property="containerGrade" destination="JQ6-bG-X9w" id="V8I-B7-TV7"/>
+                                    <outlet property="containerName" destination="FN1-An-3Pn" id="ygc-wd-1BC"/>
+                                    <outlet property="containerRank" destination="wIc-DK-Slc" id="Y7s-eC-KNU"/>
+                                    <outlet property="containerSlogan" destination="9uG-QB-qC2" id="ec9-MJ-F0V"/>
+                                    <outlet property="containerText" destination="hNo-KG-PAC" id="nak-F0-Vgv"/>
                                     <outlet property="containerView" destination="X1c-kd-thc" id="JHn-hf-sGT"/>
                                     <outlet property="containerViewTop" destination="9xj-cX-Gty" id="hRd-ig-fsD"/>
+                                    <outlet property="containerVotes" destination="yjZ-Gu-1GQ" id="h1O-Lj-L6X"/>
+                                    <outlet property="descriptionGrade" destination="rL6-7C-Hao" id="VWA-jm-nLc"/>
+                                    <outlet property="descriptionName" destination="Rx6-uY-3at" id="mfw-8x-r9q"/>
+                                    <outlet property="descriptionRank" destination="FGh-5t-Ypd" id="KOu-Px-Jpn"/>
+                                    <outlet property="descriptionSlogan" destination="i0r-X4-bRL" id="ksC-EB-JEX"/>
+                                    <outlet property="descriptionSymbol" destination="4k0-sv-ptn" id="s2b-tS-RRt"/>
+                                    <outlet property="descriptionText" destination="Uug-2n-yks" id="9cl-cf-nFa"/>
+                                    <outlet property="descriptionToday" destination="7aG-us-2fy" id="cOn-Cs-k3X"/>
+                                    <outlet property="descriptionVotes" destination="VUX-3c-E10" id="Ge1-JS-W19"/>
                                     <outlet property="foregroundView" destination="kqJ-1V-XfE" id="P1n-5u-GFZ"/>
                                     <outlet property="foregroundViewTop" destination="9Wq-uG-KA2" id="Z3u-ZU-1cm"/>
                                     <outlet property="openNumberLabel" destination="wIc-DK-Slc" id="ktS-M8-BoZ"/>

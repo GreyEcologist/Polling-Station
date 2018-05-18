@@ -13,6 +13,21 @@ import UIKit
 class DemoCell: FoldingCell {
 
     @IBOutlet var openNumberLabel: UILabel!
+    @IBOutlet var containerRank: UILabel!
+    @IBOutlet var containerGrade: UILabel!
+    @IBOutlet var containerVotes: UILabel!
+    @IBOutlet var containerName: UILabel!
+    @IBOutlet var containerSlogan: UILabel!
+    @IBOutlet var containerText: UILabel!
+    
+    @IBOutlet var descriptionRank: UILabel!
+    @IBOutlet var descriptionGrade: UILabel!
+    @IBOutlet var descriptionVotes: UILabel!
+    @IBOutlet var descriptionName: UILabel!
+    @IBOutlet var descriptionSlogan: UILabel!
+    @IBOutlet var descriptionText: UILabel!
+    @IBOutlet var descriptionSymbol: UILabel!
+    @IBOutlet var descriptionToday: UILabel!
     
 
     var number: Int = 1 {
