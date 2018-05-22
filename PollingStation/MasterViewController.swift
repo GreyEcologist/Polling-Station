@@ -32,13 +32,12 @@ class MasterViewController: UITableViewController {
             AWSAuthUIViewController.presentViewController(with: self.navigationController!, configuration: nil, completionHandler: { (provider: AWSSignInProvider, error: Error?) in
                 if error != nil {
                     print("Error occurred: \(String(describing: error))")
-                } else {
                 }
             })
         } else {
             self.setup()
             
-            let client: ROCCoinGateClient = ROCCoinGateClient.default()
+            let client: VEZCoinGateClient = VEZCoinGateClient.default()
             client.apiKey = "tHDIsk3QOp8ri94CKARO087WmI0QhYFW35otTCh7"
             client.getallcoinsGet().continueWith{ (task: AWSTask?) -> AnyObject? in
                 if let error = task?.error {
@@ -49,18 +48,30 @@ class MasterViewController: UITableViewController {
                 if let result = task?.result {
                     //print("result: \(result.debugDescription)")
                 }
-                
                 return nil
             }
 
-            client.updatecoinsPost(points: "100", id: "004").continueWith{ (task: AWSTask?) -> AnyObject? in
+            client.updatecoinsPost(points: "100", id: "0005").continueWith{ (task: AWSTask?) -> AnyObject? in
                 if let error = task?.error {
-                    print("ROC Error occurred: \(error)")
+                    print("Error occurred: \(error)")
                     return nil
                 }
                 
                 if let result = task?.result {
-                    print("ROC result: \(result.debugDescription)")
+                    //print("result: \(result.debugDescription)")
+                }
+                return nil
+            }
+            
+            let identityManager = AWSIdentityManager.default()
+            client.getvotesGet(id: identityManager.identityId!).continueWith{ (task: AWSTask?) -> AnyObject? in
+                if let error = task?.error {
+                    print("Error occurred: \(error)")
+                    return nil
+                }
+                
+                if let result = task?.result {
+                    print("result: \(result.debugDescription)")
                 }
                 return nil
             }

@@ -19,11 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         AWSDDLog.sharedInstance.logLevel = .verbose
-        pinpoint = AWSPinpoint(configuration:
-            AWSPinpointConfiguration.defaultPinpointConfiguration(launchOptions: launchOptions))
-        
+        pinpoint = AWSPinpoint(configuration: AWSPinpointConfiguration.defaultPinpointConfiguration(launchOptions: launchOptions))
         let configurationAnonymous = AWSServiceConfiguration(region: .USEast1, credentialsProvider: AWSAnonymousCredentialsProvider())
-        ROCCoinGateClient.registerClient(withConfiguration: configurationAnonymous!, forKey: "anonymousAccess")
+        VEZCoinGateClient.registerClient(withConfiguration: configurationAnonymous!, forKey: "anonymousAccess")
         
         return AWSMobileClient.sharedInstance().interceptApplication(application, didFinishLaunchingWithOptions:launchOptions)
     }
