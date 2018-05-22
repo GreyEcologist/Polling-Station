@@ -12,11 +12,11 @@
 		000F52C9209E940C00273B33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 000F52C7209E940C00273B33 /* Main.storyboard */; };
 		000F52CB209E940F00273B33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 000F52CA209E940F00273B33 /* Assets.xcassets */; };
 		000F52CE209E940F00273B33 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 000F52CC209E940F00273B33 /* LaunchScreen.storyboard */; };
+		003AFEDA20B09CA5002A74A6 /* CoinDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003AFED920B09CA5002A74A6 /* CoinDB.swift */; };
+		003AFEDC20B09CB7002A74A6 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 003AFEDB20B09CB7002A74A6 /* awsconfiguration.json */; };
+		003AFEE920B3375B002A74A6 /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003AFEE820B3375B002A74A6 /* Empty.swift */; };
+		003AFEFD20B3E525002A74A6 /* ROCCoinGateClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003AFEFC20B3E525002A74A6 /* ROCCoinGateClient.swift */; };
 		0060658B209FD65D004BBC44 /* DemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0060658A209FD65D004BBC44 /* DemoCell.swift */; };
-		00CD16D720A799DF004C236C /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 00CD16D620A799DF004C236C /* awsconfiguration.json */; };
-		00CD16D920A79A88004C236C /* CoinDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD16D820A79A88004C236C /* CoinDescription.swift */; };
-		00CD16DE20A7B5ED004C236C /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD16DB20A7B5EC004C236C /* Empty.swift */; };
-		00CD16E620A90295004C236C /* NEVCoinGateClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CD16E520A90295004C236C /* NEVCoinGateClient.swift */; };
 		99495357F6417BC5892C4781 /* Pods_PollingStation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D54E60DC4343488FA7332C7 /* Pods_PollingStation.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,13 +28,13 @@
 		000F52CA209E940F00273B33 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		000F52CD209E940F00273B33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		000F52CF209E940F00273B33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		003AFED920B09CA5002A74A6 /* CoinDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinDB.swift; sourceTree = "<group>"; };
+		003AFEDB20B09CB7002A74A6 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
+		003AFEE320B3331E002A74A6 /* AWSApiGatewayBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWSApiGatewayBridge.h; sourceTree = "<group>"; };
+		003AFEE820B3375B002A74A6 /* Empty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Empty.swift; sourceTree = "<group>"; };
+		003AFEFC20B3E525002A74A6 /* ROCCoinGateClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ROCCoinGateClient.swift; sourceTree = "<group>"; };
 		0060658A209FD65D004BBC44 /* DemoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoCell.swift; sourceTree = "<group>"; };
-		00CD16D620A799DF004C236C /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
-		00CD16D820A79A88004C236C /* CoinDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinDescription.swift; sourceTree = "<group>"; };
-		00CD16DB20A7B5EC004C236C /* Empty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Empty.swift; sourceTree = "<group>"; };
-		00CD16DC20A7B5ED004C236C /* AWSApiGatewayBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWSApiGatewayBridge.h; sourceTree = "<group>"; };
 		00CD16E220A8F895004C236C /* PollingStation-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PollingStation-Bridging-Header.h"; sourceTree = "<group>"; };
-		00CD16E520A90295004C236C /* NEVCoinGateClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NEVCoinGateClient.swift; sourceTree = "<group>"; };
 		1AA6F6066C77AE0A6ABE8406 /* Pods-PollingStation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingStation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PollingStation/Pods-PollingStation.debug.xcconfig"; sourceTree = "<group>"; };
 		3D54E60DC4343488FA7332C7 /* Pods_PollingStation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PollingStation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E317B5AA70DDBDB4019E6316 /* Pods-PollingStation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingStation.release.xcconfig"; path = "Pods/Target Support Files/Pods-PollingStation/Pods-PollingStation.release.xcconfig"; sourceTree = "<group>"; };
@@ -75,16 +75,16 @@
 			children = (
 				000F52C1209E940C00273B33 /* AppDelegate.swift */,
 				000F52C3209E940C00273B33 /* MasterViewController.swift */,
-				00CD16D820A79A88004C236C /* CoinDescription.swift */,
+				003AFED920B09CA5002A74A6 /* CoinDB.swift */,
 				0060658A209FD65D004BBC44 /* DemoCell.swift */,
-				00CD16DC20A7B5ED004C236C /* AWSApiGatewayBridge.h */,
+				003AFEE320B3331E002A74A6 /* AWSApiGatewayBridge.h */,
 				00CD16E220A8F895004C236C /* PollingStation-Bridging-Header.h */,
-				00CD16E520A90295004C236C /* NEVCoinGateClient.swift */,
-				00CD16DB20A7B5EC004C236C /* Empty.swift */,
+				003AFEFC20B3E525002A74A6 /* ROCCoinGateClient.swift */,
+				003AFEE820B3375B002A74A6 /* Empty.swift */,
 				000F52C7209E940C00273B33 /* Main.storyboard */,
 				000F52CA209E940F00273B33 /* Assets.xcassets */,
 				000F52CC209E940F00273B33 /* LaunchScreen.storyboard */,
-				00CD16D620A799DF004C236C /* awsconfiguration.json */,
+				003AFEDB20B09CB7002A74A6 /* awsconfiguration.json */,
 				000F52CF209E940F00273B33 /* Info.plist */,
 			);
 			path = PollingStation;
@@ -168,8 +168,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00CD16D720A799DF004C236C /* awsconfiguration.json in Resources */,
 				000F52CE209E940F00273B33 /* LaunchScreen.storyboard in Resources */,
+				003AFEDC20B09CB7002A74A6 /* awsconfiguration.json in Resources */,
 				000F52CB209E940F00273B33 /* Assets.xcassets in Resources */,
 				000F52C9209E940C00273B33 /* Main.storyboard in Resources */,
 			);
@@ -243,12 +243,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00CD16E620A90295004C236C /* NEVCoinGateClient.swift in Sources */,
 				000F52C4209E940C00273B33 /* MasterViewController.swift in Sources */,
-				00CD16D920A79A88004C236C /* CoinDescription.swift in Sources */,
-				00CD16DE20A7B5ED004C236C /* Empty.swift in Sources */,
+				003AFEDA20B09CA5002A74A6 /* CoinDB.swift in Sources */,
+				003AFEE920B3375B002A74A6 /* Empty.swift in Sources */,
 				0060658B209FD65D004BBC44 /* DemoCell.swift in Sources */,
 				000F52C2209E940C00273B33 /* AppDelegate.swift in Sources */,
+				003AFEFD20B3E525002A74A6 /* ROCCoinGateClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,7 +399,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6AEA7P6XSJ;
 				INFOPLIST_FILE = PollingStation/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.GreyEcology.PollingStation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/PollingStation-Bridging-Header.h";
@@ -418,7 +421,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6AEA7P6XSJ;
 				INFOPLIST_FILE = PollingStation/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.GreyEcology.PollingStation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/PollingStation-Bridging-Header.h";

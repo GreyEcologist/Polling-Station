@@ -17,12 +17,12 @@
 import AWSCore
 import AWSAPIGateway
 
-public class NEVCoinGateClient: AWSAPIGatewayClient {
+public class ROCCoinGateClient: AWSAPIGatewayClient {
 
-	static let AWSInfoClientKey = "NEVCoinGateClient"
+	static let AWSInfoClientKey = "ROCCoinGateClient"
 
 	private static let _serviceClients = AWSSynchronizedMutableDictionary()
-	private static let _defaultClient:NEVCoinGateClient = {
+	private static let _defaultClient:ROCCoinGateClient = {
 		var serviceConfiguration: AWSServiceConfiguration? = nil
         let serviceInfo = AWSInfo.default().defaultServiceInfo(AWSInfoClientKey)
         if let serviceInfo = serviceInfo {
@@ -33,7 +33,7 @@ public class NEVCoinGateClient: AWSAPIGatewayClient {
             serviceConfiguration = AWSServiceConfiguration(region: .Unknown, credentialsProvider: nil)
         }
         
-        return NEVCoinGateClient(configuration: serviceConfiguration!)
+        return ROCCoinGateClient(configuration: serviceConfiguration!)
 	}()
     
 	/**
@@ -51,14 +51,14 @@ public class NEVCoinGateClient: AWSAPIGatewayClient {
 	
 	 Then call the following to get the default service client:
 	
-	     let serviceClient = NEVCoinGateClient.default()
+	     let serviceClient = ROCCoinGateClient.default()
 
-     Alternatively, this configuration could also be set in the `info.plist` file of your app under `AWS` dictionary with a configuration dictionary by name `NEVCoinGateClient`.
+     Alternatively, this configuration could also be set in the `info.plist` file of your app under `AWS` dictionary with a configuration dictionary by name `ROCCoinGateClient`.
 	
 	 @return The default service client.
 	 */ 
 	 
-	public class func `default`() -> NEVCoinGateClient{
+	public class func `default`() -> ROCCoinGateClient{
 		return _defaultClient
 	}
 
@@ -70,7 +70,7 @@ public class NEVCoinGateClient: AWSAPIGatewayClient {
 	     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 	         let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "YourIdentityPoolId")
 	         let configuration = AWSServiceConfiguration(region: .USWest2, credentialsProvider: credentialProvider)
-	         NEVCoinGateClient.registerClient(withConfiguration: configuration, forKey: "USWest2NEVCoinGateClient")
+	         ROCCoinGateClient.registerClient(withConfiguration: configuration, forKey: "USWest2ROCCoinGateClient")
 	
 	         return true
 	     }
@@ -78,7 +78,7 @@ public class NEVCoinGateClient: AWSAPIGatewayClient {
 	 Then call the following to get the service client:
 	
 	
-	     let serviceClient = NEVCoinGateClient.client(forKey: "USWest2NEVCoinGateClient")
+	     let serviceClient = ROCCoinGateClient.client(forKey: "USWest2ROCCoinGateClient")
 	
 	 @warning After calling this method, do not modify the configuration object. It may cause unspecified behaviors.
 	
@@ -87,7 +87,7 @@ public class NEVCoinGateClient: AWSAPIGatewayClient {
 	 */
 	
 	public class func registerClient(withConfiguration configuration: AWSServiceConfiguration, forKey key: String){
-		_serviceClients.setObject(NEVCoinGateClient(configuration: configuration), forKey: key  as NSString);
+		_serviceClients.setObject(ROCCoinGateClient(configuration: configuration), forKey: key  as NSString);
 	}
 
 	/**
@@ -98,21 +98,21 @@ public class NEVCoinGateClient: AWSAPIGatewayClient {
 	     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 	         let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "YourIdentityPoolId")
 	         let configuration = AWSServiceConfiguration(region: .USWest2, credentialsProvider: credentialProvider)
-	         NEVCoinGateClient.registerClient(withConfiguration: configuration, forKey: "USWest2NEVCoinGateClient")
+	         ROCCoinGateClient.registerClient(withConfiguration: configuration, forKey: "USWest2ROCCoinGateClient")
 	
 	         return true
 	     }
 	
 	 Then call the following to get the service client:
 	 
-	 	let serviceClient = NEVCoinGateClient.client(forKey: "USWest2NEVCoinGateClient")
+	 	let serviceClient = ROCCoinGateClient.client(forKey: "USWest2ROCCoinGateClient")
 	 
 	 @param key A string to identify the service client.
 	 @return An instance of the service client.
 	 */
-	public class func client(forKey key: String) -> NEVCoinGateClient {
+	public class func client(forKey key: String) -> ROCCoinGateClient {
 		objc_sync_enter(self)
-		if let client: NEVCoinGateClient = _serviceClients.object(forKey: key) as? NEVCoinGateClient {
+		if let client: ROCCoinGateClient = _serviceClients.object(forKey: key) as? ROCCoinGateClient {
 			objc_sync_exit(self)
 		    return client
 		}
@@ -120,10 +120,10 @@ public class NEVCoinGateClient: AWSAPIGatewayClient {
 		let serviceInfo = AWSInfo.default().defaultServiceInfo(AWSInfoClientKey)
 		if let serviceInfo = serviceInfo {
 			let serviceConfiguration = AWSServiceConfiguration(region: serviceInfo.region, credentialsProvider: serviceInfo.cognitoCredentialsProvider)
-			NEVCoinGateClient.registerClient(withConfiguration: serviceConfiguration!, forKey: key)
+			ROCCoinGateClient.registerClient(withConfiguration: serviceConfiguration!, forKey: key)
 		}
 		objc_sync_exit(self)
-		return _serviceClients.object(forKey: key) as! NEVCoinGateClient;
+		return _serviceClients.object(forKey: key) as! ROCCoinGateClient;
 	}
 
 	/**
@@ -141,7 +141,7 @@ public class NEVCoinGateClient: AWSAPIGatewayClient {
 	    super.init()
 	
 	    self.configuration = configuration.copy() as! AWSServiceConfiguration
-	    var URLString: String = "https://gseu21lhm6.execute-api.us-east-1.amazonaws.com/Dev"
+	    var URLString: String = "https://gseu21lhm6.execute-api.us-east-1.amazonaws.com/PRD"
 	    if URLString.hasSuffix("/") {
 	        URLString = URLString.substring(to: URLString.index(before: URLString.endIndex))
 	    }
@@ -172,6 +172,30 @@ public class NEVCoinGateClient: AWSAPIGatewayClient {
 	    let pathParameters:[String:Any] = [:]
 	    
 	    return self.invokeHTTPRequest("GET", urlString: "/getallcoins", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: Empty.self) as! AWSTask<Empty>
+	}
+
+	
+    /*
+     
+     
+     @param points 
+     @param id 
+     
+     return type: Empty
+     */
+    public func updatecoinsPost(points: String, id: String) -> AWSTask<Empty> {
+	    let headerParameters = [
+                   "Content-Type": "application/json",
+                   "Accept": "application/json",
+                   "points": points,
+                   "id": id
+	            ]
+	    
+	    let queryParameters:[String:Any] = [:]
+	    
+	    let pathParameters:[String:Any] = [:]
+	    
+	    return self.invokeHTTPRequest("POST", urlString: "/updatecoins", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: Empty.self) as! AWSTask<Empty>
 	}
 
 

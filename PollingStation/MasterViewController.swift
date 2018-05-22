@@ -38,8 +38,8 @@ class MasterViewController: UITableViewController {
         } else {
             self.setup()
             
-            let client: NEVCoinGateClient = NEVCoinGateClient.default()
-            client.apiKey = "znjpFhER2fa7nI7A2RISi7gXDa9AhIWb6jRcGNHt"
+            let client: ROCCoinGateClient = ROCCoinGateClient.default()
+            client.apiKey = "tHDIsk3QOp8ri94CKARO087WmI0QhYFW35otTCh7"
             client.getallcoinsGet().continueWith{ (task: AWSTask?) -> AnyObject? in
                 if let error = task?.error {
                     print("Error occurred: \(error)")
@@ -47,9 +47,21 @@ class MasterViewController: UITableViewController {
                 }
                 
                 if let result = task?.result {
-                    print("result: \(result.debugDescription)")
+                    //print("result: \(result.debugDescription)")
                 }
                 
+                return nil
+            }
+
+            client.updatecoinsPost(points: "100", id: "004").continueWith{ (task: AWSTask?) -> AnyObject? in
+                if let error = task?.error {
+                    print("ROC Error occurred: \(error)")
+                    return nil
+                }
+                
+                if let result = task?.result {
+                    print("ROC result: \(result.debugDescription)")
+                }
                 return nil
             }
         }

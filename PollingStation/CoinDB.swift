@@ -1,5 +1,5 @@
 //
-//  CoinDescription.swift
+//  CoinDB.swift
 //  MySampleApp
 //
 //
@@ -15,21 +15,23 @@ import Foundation
 import UIKit
 import AWSDynamoDB
 
-class CoinDescription: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
+class CoinDB: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
     
     var _userId: String?
-    var _vote: NSNumber?
-    var _age: NSNumber?
     var _backgroundImage: String?
-    var _category: String?
+    var _created: String?
     var _logoImage: String?
     var _name: String?
-    var _sign: String?
+    var _purpose: String?
+    var _symbol: String?
+    var _totalPoints: NSNumber?
     var _type: String?
+    var _voteCount: NSNumber?
+    var _voteToday: NSNumber?
     
     class func dynamoDBTableName() -> String {
 
-        return "pollingstation-mobilehub-1632318331-Coin-Description"
+        return "pollingstation-mobilehub-1632318331-CoinDB"
     }
     
     class func hashKeyAttribute() -> String {
@@ -37,22 +39,19 @@ class CoinDescription: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
         return "_userId"
     }
     
-    class func rangeKeyAttribute() -> String {
-
-        return "_vote"
-    }
-    
     override class func jsonKeyPathsByPropertyKey() -> [AnyHashable: Any] {
         return [
                "_userId" : "userId",
-               "_vote" : "vote",
-               "_age" : "age",
                "_backgroundImage" : "background_image",
-               "_category" : "category",
+               "_created" : "created",
                "_logoImage" : "logo_image",
                "_name" : "name",
-               "_sign" : "sign",
+               "_purpose" : "purpose",
+               "_symbol" : "symbol",
+               "_totalPoints" : "total_points",
                "_type" : "type",
+               "_voteCount" : "vote_count",
+               "_voteToday" : "vote_today",
         ]
     }
 }

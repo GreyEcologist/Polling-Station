@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             AWSPinpointConfiguration.defaultPinpointConfiguration(launchOptions: launchOptions))
         
         let configurationAnonymous = AWSServiceConfiguration(region: .USEast1, credentialsProvider: AWSAnonymousCredentialsProvider())
-        NEVCoinGateClient.registerClient(withConfiguration: configurationAnonymous!, forKey: "anonymousAccess")
+        ROCCoinGateClient.registerClient(withConfiguration: configurationAnonymous!, forKey: "anonymousAccess")
         
         return AWSMobileClient.sharedInstance().interceptApplication(application, didFinishLaunchingWithOptions:launchOptions)
     }
