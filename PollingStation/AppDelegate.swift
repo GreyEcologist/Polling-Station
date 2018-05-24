@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AWSDDLog.sharedInstance.logLevel = .verbose
         pinpoint = AWSPinpoint(configuration: AWSPinpointConfiguration.defaultPinpointConfiguration(launchOptions: launchOptions))
         let configurationAnonymous = AWSServiceConfiguration(region: .USEast1, credentialsProvider: AWSAnonymousCredentialsProvider())
-        VEZCoinGateClient.registerClient(withConfiguration: configurationAnonymous!, forKey: "anonymousAccess")
+        SWICoinGateClient.registerClient(withConfiguration: configurationAnonymous!, forKey: "anonymousAccess")
         
         return AWSMobileClient.sharedInstance().interceptApplication(application, didFinishLaunchingWithOptions:launchOptions)
     }

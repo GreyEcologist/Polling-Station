@@ -17,12 +17,12 @@
 import AWSCore
 import AWSAPIGateway
 
-public class VEZCoinGateClient: AWSAPIGatewayClient {
+public class SWICoinGateClient: AWSAPIGatewayClient {
 
-	static let AWSInfoClientKey = "VEZCoinGateClient"
+	static let AWSInfoClientKey = "SWICoinGateClient"
 
 	private static let _serviceClients = AWSSynchronizedMutableDictionary()
-	private static let _defaultClient:VEZCoinGateClient = {
+	private static let _defaultClient:SWICoinGateClient = {
 		var serviceConfiguration: AWSServiceConfiguration? = nil
         let serviceInfo = AWSInfo.default().defaultServiceInfo(AWSInfoClientKey)
         if let serviceInfo = serviceInfo {
@@ -33,7 +33,7 @@ public class VEZCoinGateClient: AWSAPIGatewayClient {
             serviceConfiguration = AWSServiceConfiguration(region: .Unknown, credentialsProvider: nil)
         }
         
-        return VEZCoinGateClient(configuration: serviceConfiguration!)
+        return SWICoinGateClient(configuration: serviceConfiguration!)
 	}()
     
 	/**
@@ -51,14 +51,14 @@ public class VEZCoinGateClient: AWSAPIGatewayClient {
 	
 	 Then call the following to get the default service client:
 	
-	     let serviceClient = VEZCoinGateClient.default()
+	     let serviceClient = SWICoinGateClient.default()
 
-     Alternatively, this configuration could also be set in the `info.plist` file of your app under `AWS` dictionary with a configuration dictionary by name `VEZCoinGateClient`.
+     Alternatively, this configuration could also be set in the `info.plist` file of your app under `AWS` dictionary with a configuration dictionary by name `SWICoinGateClient`.
 	
 	 @return The default service client.
 	 */ 
 	 
-	public class func `default`() -> VEZCoinGateClient{
+	public class func `default`() -> SWICoinGateClient{
 		return _defaultClient
 	}
 
@@ -70,7 +70,7 @@ public class VEZCoinGateClient: AWSAPIGatewayClient {
 	     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 	         let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "YourIdentityPoolId")
 	         let configuration = AWSServiceConfiguration(region: .USWest2, credentialsProvider: credentialProvider)
-	         VEZCoinGateClient.registerClient(withConfiguration: configuration, forKey: "USWest2VEZCoinGateClient")
+	         SWICoinGateClient.registerClient(withConfiguration: configuration, forKey: "USWest2SWICoinGateClient")
 	
 	         return true
 	     }
@@ -78,7 +78,7 @@ public class VEZCoinGateClient: AWSAPIGatewayClient {
 	 Then call the following to get the service client:
 	
 	
-	     let serviceClient = VEZCoinGateClient.client(forKey: "USWest2VEZCoinGateClient")
+	     let serviceClient = SWICoinGateClient.client(forKey: "USWest2SWICoinGateClient")
 	
 	 @warning After calling this method, do not modify the configuration object. It may cause unspecified behaviors.
 	
@@ -87,7 +87,7 @@ public class VEZCoinGateClient: AWSAPIGatewayClient {
 	 */
 	
 	public class func registerClient(withConfiguration configuration: AWSServiceConfiguration, forKey key: String){
-		_serviceClients.setObject(VEZCoinGateClient(configuration: configuration), forKey: key  as NSString);
+		_serviceClients.setObject(SWICoinGateClient(configuration: configuration), forKey: key  as NSString);
 	}
 
 	/**
@@ -98,21 +98,21 @@ public class VEZCoinGateClient: AWSAPIGatewayClient {
 	     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 	         let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "YourIdentityPoolId")
 	         let configuration = AWSServiceConfiguration(region: .USWest2, credentialsProvider: credentialProvider)
-	         VEZCoinGateClient.registerClient(withConfiguration: configuration, forKey: "USWest2VEZCoinGateClient")
+	         SWICoinGateClient.registerClient(withConfiguration: configuration, forKey: "USWest2SWICoinGateClient")
 	
 	         return true
 	     }
 	
 	 Then call the following to get the service client:
 	 
-	 	let serviceClient = VEZCoinGateClient.client(forKey: "USWest2VEZCoinGateClient")
+	 	let serviceClient = SWICoinGateClient.client(forKey: "USWest2SWICoinGateClient")
 	 
 	 @param key A string to identify the service client.
 	 @return An instance of the service client.
 	 */
-	public class func client(forKey key: String) -> VEZCoinGateClient {
+	public class func client(forKey key: String) -> SWICoinGateClient {
 		objc_sync_enter(self)
-		if let client: VEZCoinGateClient = _serviceClients.object(forKey: key) as? VEZCoinGateClient {
+		if let client: SWICoinGateClient = _serviceClients.object(forKey: key) as? SWICoinGateClient {
 			objc_sync_exit(self)
 		    return client
 		}
@@ -120,10 +120,10 @@ public class VEZCoinGateClient: AWSAPIGatewayClient {
 		let serviceInfo = AWSInfo.default().defaultServiceInfo(AWSInfoClientKey)
 		if let serviceInfo = serviceInfo {
 			let serviceConfiguration = AWSServiceConfiguration(region: serviceInfo.region, credentialsProvider: serviceInfo.cognitoCredentialsProvider)
-			VEZCoinGateClient.registerClient(withConfiguration: serviceConfiguration!, forKey: key)
+			SWICoinGateClient.registerClient(withConfiguration: serviceConfiguration!, forKey: key)
 		}
 		objc_sync_exit(self)
-		return _serviceClients.object(forKey: key) as! VEZCoinGateClient;
+		return _serviceClients.object(forKey: key) as! SWICoinGateClient;
 	}
 
 	/**
@@ -151,6 +151,28 @@ public class VEZCoinGateClient: AWSAPIGatewayClient {
 	    	self.configuration.baseURL = endpoint.url
 	    }
 	    self.configuration.requestInterceptors = [AWSNetworkingRequestInterceptor(), signer]
+	}
+
+	
+    /*
+     
+     
+     @param userid 
+     
+     return type: Empty
+     */
+    public func createuserPost(userid: String?) -> AWSTask<Empty> {
+	    let headerParameters = [
+                   "Content-Type": "application/json",
+                   "Accept": "application/json",
+                   "userid": userid!
+	            ]
+	    
+	    let queryParameters:[String:Any] = [:]
+	    
+	    let pathParameters:[String:Any] = [:]
+	    
+	    return self.invokeHTTPRequest("POST", urlString: "/createuser", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: Empty.self) as! AWSTask<Empty>
 	}
 
 	
@@ -200,15 +222,17 @@ public class VEZCoinGateClient: AWSAPIGatewayClient {
     /*
      
      
+     @param userId 
      @param points 
      @param id 
      
      return type: Empty
      */
-    public func updatecoinsPost(points: String, id: String) -> AWSTask<Empty> {
+    public func updatecoinsPost(userId: String, points: String, id: String) -> AWSTask<Empty> {
 	    let headerParameters = [
                    "Content-Type": "application/json",
                    "Accept": "application/json",
+                   "userId": userId,
                    "points": points,
                    "id": id
 	            ]

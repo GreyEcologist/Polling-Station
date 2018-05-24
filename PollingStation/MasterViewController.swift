@@ -37,7 +37,8 @@ class MasterViewController: UITableViewController {
         } else {
             self.setup()
             
-            let client: VEZCoinGateClient = VEZCoinGateClient.default()
+            let identityManager = AWSIdentityManager.default()
+            let client: SWICoinGateClient = SWICoinGateClient.default()
             client.apiKey = "tHDIsk3QOp8ri94CKARO087WmI0QhYFW35otTCh7"
             client.getallcoinsGet().continueWith{ (task: AWSTask?) -> AnyObject? in
                 if let error = task?.error {
@@ -51,7 +52,7 @@ class MasterViewController: UITableViewController {
                 return nil
             }
 
-            client.updatecoinsPost(points: "100", id: "0005").continueWith{ (task: AWSTask?) -> AnyObject? in
+            client.updatecoinsPost(userId: "0001", points: "100", id: "0002").continueWith{ (task: AWSTask?) -> AnyObject? in
                 if let error = task?.error {
                     print("Error occurred: \(error)")
                     return nil
@@ -63,8 +64,19 @@ class MasterViewController: UITableViewController {
                 return nil
             }
             
-            let identityManager = AWSIdentityManager.default()
             client.getvotesGet(id: identityManager.identityId!).continueWith{ (task: AWSTask?) -> AnyObject? in
+                if let error = task?.error {
+                    print("Error occurred: \(error)")
+                    return nil
+                }
+                
+                if let result = task?.result {
+                    //print("result: \(result.debugDescription)")
+                }
+                return nil
+            }
+            
+            client.createuserPost(userid: identityManager.identityId!).continueWith{ (task: AWSTask?) -> AnyObject? in
                 if let error = task?.error {
                     print("Error occurred: \(error)")
                     return nil
