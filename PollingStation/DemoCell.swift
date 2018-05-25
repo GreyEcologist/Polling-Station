@@ -27,6 +27,8 @@ class DemoCell: FoldingCell {
     @IBOutlet var descriptionText: UILabel!
     @IBOutlet var descriptionSymbol: UILabel!
     @IBOutlet var descriptionToday: UILabel!
+    @IBOutlet var descriptionImageView: UIImageView!
+    @IBOutlet var descriptionLogoView: UIImageView!
     
 
     override func awakeFromNib() {

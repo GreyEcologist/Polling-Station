@@ -442,6 +442,8 @@
                                     <outlet property="containerViewTop" destination="9xj-cX-Gty" id="hRd-ig-fsD"/>
                                     <outlet property="containerVotes" destination="yjZ-Gu-1GQ" id="h1O-Lj-L6X"/>
                                     <outlet property="descriptionGrade" destination="rL6-7C-Hao" id="VWA-jm-nLc"/>
+                                    <outlet property="descriptionImageView" destination="kt2-u9-RQt" id="nQq-Sx-btr"/>
+                                    <outlet property="descriptionLogoView" destination="ymC-rT-imX" id="s4Y-eA-csg"/>
                                     <outlet property="descriptionName" destination="Rx6-uY-3at" id="mfw-8x-r9q"/>
                                     <outlet property="descriptionRank" destination="FGh-5t-Ypd" id="KOu-Px-Jpn"/>
                                     <outlet property="descriptionSlogan" destination="i0r-X4-bRL" id="ksC-EB-JEX"/>

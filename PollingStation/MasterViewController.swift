@@ -210,6 +210,24 @@ class MasterViewController: UITableViewController {
             cell.descriptionRank.text = items[indexPath.row].index.stringValue
             cell.descriptionVotes.text = items[indexPath.row].totalPoints.stringValue
             cell.descriptionText.text = items[indexPath.row].description
+            
+            let url = URL(string: items[indexPath.row].logoImage)
+            
+            DispatchQueue.global().async {
+                let data = try? Data(contentsOf: url!)
+                DispatchQueue.main.async {
+                    cell.descriptionLogoView.image = UIImage(data: data!)
+                }
+            }
+            
+            let url2 = URL(string: items[indexPath.row].backgroundImage)
+            DispatchQueue.global().async {
+                let data2 = try? Data(contentsOf: url2!)
+                DispatchQueue.main.async {
+                    cell.descriptionImageView.image = UIImage(data: data2!)
+                }
+            }
+
         }
         
         return cell
