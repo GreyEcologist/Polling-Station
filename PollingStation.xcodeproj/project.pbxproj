@@ -17,6 +17,8 @@
 		003AFEE920B3375B002A74A6 /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003AFEE820B3375B002A74A6 /* Empty.swift */; };
 		0060658B209FD65D004BBC44 /* DemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0060658A209FD65D004BBC44 /* DemoCell.swift */; };
 		00C88B9220B7CDF400B02B36 /* SUPCoinGateClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C88B9120B7CDF400B02B36 /* SUPCoinGateClient.swift */; };
+		00C88B9620B80FAB00B02B36 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C88B9520B80FAB00B02B36 /* Services.swift */; };
+		00C88B9820B8103D00B02B36 /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C88B9720B8103C00B02B36 /* CoinModel.swift */; };
 		99495357F6417BC5892C4781 /* Pods_PollingStation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D54E60DC4343488FA7332C7 /* Pods_PollingStation.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +36,8 @@
 		003AFEE820B3375B002A74A6 /* Empty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Empty.swift; sourceTree = "<group>"; };
 		0060658A209FD65D004BBC44 /* DemoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoCell.swift; sourceTree = "<group>"; };
 		00C88B9120B7CDF400B02B36 /* SUPCoinGateClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SUPCoinGateClient.swift; sourceTree = "<group>"; };
+		00C88B9520B80FAB00B02B36 /* Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		00C88B9720B8103C00B02B36 /* CoinModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
 		00CD16E220A8F895004C236C /* PollingStation-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PollingStation-Bridging-Header.h"; sourceTree = "<group>"; };
 		1AA6F6066C77AE0A6ABE8406 /* Pods-PollingStation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingStation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PollingStation/Pods-PollingStation.debug.xcconfig"; sourceTree = "<group>"; };
 		3D54E60DC4343488FA7332C7 /* Pods_PollingStation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PollingStation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +79,8 @@
 			children = (
 				000F52C1209E940C00273B33 /* AppDelegate.swift */,
 				000F52C3209E940C00273B33 /* MasterViewController.swift */,
+				00C88B9520B80FAB00B02B36 /* Services.swift */,
+				00C88B9720B8103C00B02B36 /* CoinModel.swift */,
 				003AFED920B09CA5002A74A6 /* CoinDB.swift */,
 				0060658A209FD65D004BBC44 /* DemoCell.swift */,
 				003AFEE320B3331E002A74A6 /* AWSApiGatewayBridge.h */,
@@ -215,6 +221,7 @@
 				"${BUILT_PRODUCTS_DIR}/AWSUserPoolsSignIn/AWSUserPoolsSignIn.framework",
 				"${BUILT_PRODUCTS_DIR}/Alertift/Alertift.framework",
 				"${BUILT_PRODUCTS_DIR}/FoldingCell/FoldingCell.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -231,6 +238,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AWSUserPoolsSignIn.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alertift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FoldingCell.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,6 +256,8 @@
 				000F52C4209E940C00273B33 /* MasterViewController.swift in Sources */,
 				003AFEDA20B09CA5002A74A6 /* CoinDB.swift in Sources */,
 				003AFEE920B3375B002A74A6 /* Empty.swift in Sources */,
+				00C88B9820B8103D00B02B36 /* CoinModel.swift in Sources */,
+				00C88B9620B80FAB00B02B36 /* Services.swift in Sources */,
 				0060658B209FD65D004BBC44 /* DemoCell.swift in Sources */,
 				000F52C2209E940C00273B33 /* AppDelegate.swift in Sources */,
 				00C88B9220B7CDF400B02B36 /* SUPCoinGateClient.swift in Sources */,
@@ -401,7 +411,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6AEA7P6XSJ;
 				INFOPLIST_FILE = PollingStation/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.GreyEcology.PollingStation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/PollingStation-Bridging-Header.h";
@@ -420,7 +433,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6AEA7P6XSJ;
 				INFOPLIST_FILE = PollingStation/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.GreyEcology.PollingStation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/$(PROJECT_NAME)/PollingStation-Bridging-Header.h";

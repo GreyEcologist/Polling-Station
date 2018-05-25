@@ -12,4 +12,5 @@ target :'PollingStation' do
     pod 'FoldingCell', '~> 3.0.6'
     pod 'Alertift', '~> 3.0'
     pod 'SwiftyJSON', '~> 4.1.0'
+    pod 'ObjectMapper', '~> 3.1.0'
 end

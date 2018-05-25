@@ -12,6 +12,7 @@ import AWSAuthUI
 import FoldingCell
 import AWSDynamoDB
 import Alertift
+import SwiftyJSON
 
 
 class MasterViewController: UITableViewController {
@@ -35,7 +36,6 @@ class MasterViewController: UITableViewController {
         var voteCount: NSNumber
         var voteToday: NSNumber
     }
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,10 +59,12 @@ class MasterViewController: UITableViewController {
                     print("Error occurred: \(error)")
                     return nil
                 }
-                
+            
                 if let result = task?.result {
-                    print(result)
+                    let service = CoinService(JSONString: result as! String)
+                    self.setUpTable(service: service!)
                 }
+                
                 return nil
             }
 
@@ -73,8 +75,7 @@ class MasterViewController: UITableViewController {
                 }
                 
                 if let result = task?.result {
-                    let myData = task.result as! String
-                    //print("result: \(result.debugDescription)")
+                    //
                 }
                 return nil
             }
@@ -115,6 +116,12 @@ class MasterViewController: UITableViewController {
                 return nil
             }
         }
+    }
+    
+    private func setUpTable(service : CoinService) {
+        print("coins: \(service.items!.count)")
+        print("coins[0]: \(service.items![0].id)")
+        print("coins[0]: \(service.items![0].backgroundImage)")
     }
     
     private func setup() {

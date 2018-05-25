@@ -15,6 +15,7 @@ import Foundation
 import UIKit
 import AWSDynamoDB
 
+
 class CoinDB: AWSDynamoDBObjectModel, AWSDynamoDBModeling {
     
     var _userId: String?
