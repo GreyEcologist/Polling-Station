@@ -38,7 +38,7 @@ class MasterViewController: UITableViewController {
             self.setup()
             
             let identityManager = AWSIdentityManager.default()
-            let client: SWICoinGateClient = SWICoinGateClient.default()
+            let client: SUPCoinGateClient = SUPCoinGateClient.default()
             client.apiKey = "tHDIsk3QOp8ri94CKARO087WmI0QhYFW35otTCh7"
             client.getallcoinsGet().continueWith{ (task: AWSTask?) -> AnyObject? in
                 if let error = task?.error {
@@ -79,6 +79,18 @@ class MasterViewController: UITableViewController {
             client.createuserPost(userid: identityManager.identityId!).continueWith{ (task: AWSTask?) -> AnyObject? in
                 if let error = task?.error {
                     print("Error occurred: \(error)")
+                    return nil
+                }
+                
+                if let result = task?.result {
+                    //print("result: \(result.debugDescription)")
+                }
+                return nil
+            }
+            
+            client.usertokenvotePost(userid: identityManager.identityId!).continueWith{ (task: AWSTask?) -> AnyObject? in
+                if let error = task?.error {
+                    print("usertoken Error occurred: \(error)")
                     return nil
                 }
                 

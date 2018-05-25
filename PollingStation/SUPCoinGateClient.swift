@@ -17,12 +17,12 @@
 import AWSCore
 import AWSAPIGateway
 
-public class SWICoinGateClient: AWSAPIGatewayClient {
+public class SUPCoinGateClient: AWSAPIGatewayClient {
 
-	static let AWSInfoClientKey = "SWICoinGateClient"
+	static let AWSInfoClientKey = "SUPCoinGateClient"
 
 	private static let _serviceClients = AWSSynchronizedMutableDictionary()
-	private static let _defaultClient:SWICoinGateClient = {
+	private static let _defaultClient:SUPCoinGateClient = {
 		var serviceConfiguration: AWSServiceConfiguration? = nil
         let serviceInfo = AWSInfo.default().defaultServiceInfo(AWSInfoClientKey)
         if let serviceInfo = serviceInfo {
@@ -33,7 +33,7 @@ public class SWICoinGateClient: AWSAPIGatewayClient {
             serviceConfiguration = AWSServiceConfiguration(region: .Unknown, credentialsProvider: nil)
         }
         
-        return SWICoinGateClient(configuration: serviceConfiguration!)
+        return SUPCoinGateClient(configuration: serviceConfiguration!)
 	}()
     
 	/**
@@ -51,14 +51,14 @@ public class SWICoinGateClient: AWSAPIGatewayClient {
 	
 	 Then call the following to get the default service client:
 	
-	     let serviceClient = SWICoinGateClient.default()
+	     let serviceClient = SUPCoinGateClient.default()
 
-     Alternatively, this configuration could also be set in the `info.plist` file of your app under `AWS` dictionary with a configuration dictionary by name `SWICoinGateClient`.
+     Alternatively, this configuration could also be set in the `info.plist` file of your app under `AWS` dictionary with a configuration dictionary by name `SUPCoinGateClient`.
 	
 	 @return The default service client.
 	 */ 
 	 
-	public class func `default`() -> SWICoinGateClient{
+	public class func `default`() -> SUPCoinGateClient{
 		return _defaultClient
 	}
 
@@ -70,7 +70,7 @@ public class SWICoinGateClient: AWSAPIGatewayClient {
 	     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 	         let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "YourIdentityPoolId")
 	         let configuration = AWSServiceConfiguration(region: .USWest2, credentialsProvider: credentialProvider)
-	         SWICoinGateClient.registerClient(withConfiguration: configuration, forKey: "USWest2SWICoinGateClient")
+	         SUPCoinGateClient.registerClient(withConfiguration: configuration, forKey: "USWest2SUPCoinGateClient")
 	
 	         return true
 	     }
@@ -78,7 +78,7 @@ public class SWICoinGateClient: AWSAPIGatewayClient {
 	 Then call the following to get the service client:
 	
 	
-	     let serviceClient = SWICoinGateClient.client(forKey: "USWest2SWICoinGateClient")
+	     let serviceClient = SUPCoinGateClient.client(forKey: "USWest2SUPCoinGateClient")
 	
 	 @warning After calling this method, do not modify the configuration object. It may cause unspecified behaviors.
 	
@@ -87,7 +87,7 @@ public class SWICoinGateClient: AWSAPIGatewayClient {
 	 */
 	
 	public class func registerClient(withConfiguration configuration: AWSServiceConfiguration, forKey key: String){
-		_serviceClients.setObject(SWICoinGateClient(configuration: configuration), forKey: key  as NSString);
+		_serviceClients.setObject(SUPCoinGateClient(configuration: configuration), forKey: key  as NSString);
 	}
 
 	/**
@@ -98,21 +98,21 @@ public class SWICoinGateClient: AWSAPIGatewayClient {
 	     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 	         let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "YourIdentityPoolId")
 	         let configuration = AWSServiceConfiguration(region: .USWest2, credentialsProvider: credentialProvider)
-	         SWICoinGateClient.registerClient(withConfiguration: configuration, forKey: "USWest2SWICoinGateClient")
+	         SUPCoinGateClient.registerClient(withConfiguration: configuration, forKey: "USWest2SUPCoinGateClient")
 	
 	         return true
 	     }
 	
 	 Then call the following to get the service client:
 	 
-	 	let serviceClient = SWICoinGateClient.client(forKey: "USWest2SWICoinGateClient")
+	 	let serviceClient = SUPCoinGateClient.client(forKey: "USWest2SUPCoinGateClient")
 	 
 	 @param key A string to identify the service client.
 	 @return An instance of the service client.
 	 */
-	public class func client(forKey key: String) -> SWICoinGateClient {
+	public class func client(forKey key: String) -> SUPCoinGateClient {
 		objc_sync_enter(self)
-		if let client: SWICoinGateClient = _serviceClients.object(forKey: key) as? SWICoinGateClient {
+		if let client: SUPCoinGateClient = _serviceClients.object(forKey: key) as? SUPCoinGateClient {
 			objc_sync_exit(self)
 		    return client
 		}
@@ -120,10 +120,10 @@ public class SWICoinGateClient: AWSAPIGatewayClient {
 		let serviceInfo = AWSInfo.default().defaultServiceInfo(AWSInfoClientKey)
 		if let serviceInfo = serviceInfo {
 			let serviceConfiguration = AWSServiceConfiguration(region: serviceInfo.region, credentialsProvider: serviceInfo.cognitoCredentialsProvider)
-			SWICoinGateClient.registerClient(withConfiguration: serviceConfiguration!, forKey: key)
+			SUPCoinGateClient.registerClient(withConfiguration: serviceConfiguration!, forKey: key)
 		}
 		objc_sync_exit(self)
-		return _serviceClients.object(forKey: key) as! SWICoinGateClient;
+		return _serviceClients.object(forKey: key) as! SUPCoinGateClient;
 	}
 
 	/**
@@ -242,6 +242,28 @@ public class SWICoinGateClient: AWSAPIGatewayClient {
 	    let pathParameters:[String:Any] = [:]
 	    
 	    return self.invokeHTTPRequest("POST", urlString: "/updatecoins", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: Empty.self) as! AWSTask<Empty>
+	}
+
+	
+    /*
+     
+     
+     @param userid 
+     
+     return type: Empty
+     */
+    public func usertokenvotePost(userid: String?) -> AWSTask<Empty> {
+	    let headerParameters = [
+                   "Content-Type": "application/json",
+                   "Accept": "application/json",
+                   "userid": userid!
+	            ]
+	    
+	    let queryParameters:[String:Any] = [:]
+	    
+	    let pathParameters:[String:Any] = [:]
+	    
+	    return self.invokeHTTPRequest("POST", urlString: "/usertokenvote", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: Empty.self) as! AWSTask<Empty>
 	}
 
 
