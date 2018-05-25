@@ -105,18 +105,6 @@ class MasterViewController: UITableViewController {
                 }
                 return nil
             }
-            
-            client.usertokenvotePost(userid: identityManager.identityId!).continueWith{ (task: AWSTask?) -> AnyObject? in
-                if let error = task?.error {
-                    print("usertoken Error occurred: \(error)")
-                    return nil
-                }
-                
-                if let result = task?.result {
-                    //print("result: \(result.debugDescription)")
-                }
-                return nil
-            }
         }
     }
     
@@ -148,6 +136,23 @@ class MasterViewController: UITableViewController {
     @objc func setToPeru(notification: NSNotification) {
         self.showAlert()
     }
+    
+    func userVote() {
+        let identityManager = AWSIdentityManager.default()
+        let client: SUPCoinGateClient = SUPCoinGateClient.default()
+        client.apiKey = "tHDIsk3QOp8ri94CKARO087WmI0QhYFW35otTCh7"
+        client.usertokenvotePost(userid: identityManager.identityId!).continueWith{ (task: AWSTask?) -> AnyObject? in
+            if let error = task?.error {
+                print("usertoken Error occurred: \(error)")
+                return nil
+            }
+            
+            if let result = task?.result {
+                print("result: \(result.debugDescription)")
+            }
+            return nil
+        }
+    }
 
     func showAlert() {
         Alertift.alert(title: "Vote", message: "Vote!")
@@ -155,7 +160,7 @@ class MasterViewController: UITableViewController {
             .action(.cancel("Cancel"))
             .finally { action, index, arg in
                 if action.style == .cancel { return }
-                print("sinaloa \(index)")
+                self.userVote()
             }
             .show(on: self)
     }
