@@ -104,13 +104,13 @@
                                                     <color key="textColor" red="0.13424258959999999" green="0.1825802859" blue="0.20891704520000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Banking the unbanked." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9uG-QB-qC2" userLabel="W 85th St, New York, 10024">
-                                                    <rect key="frame" x="97" y="48" width="220" height="32"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Banking the unbanked." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.90000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="9uG-QB-qC2" userLabel="W 85th St, New York, 10024">
+                                                    <rect key="frame" x="97" y="41" width="220" height="46"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="32" id="ViO-Ez-pVT"/>
+                                                        <constraint firstAttribute="height" constant="46" id="ViO-Ez-pVT"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="italicSystem" pointSize="19"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -122,7 +122,7 @@
                                                 <constraint firstAttribute="height" constant="165" id="1le-fQ-yY3"/>
                                                 <constraint firstItem="FN1-An-3Pn" firstAttribute="leading" secondItem="bFo-P2-jPK" secondAttribute="trailing" constant="9" id="5wk-8R-xl4"/>
                                                 <constraint firstItem="hNo-KG-PAC" firstAttribute="top" secondItem="0gq-KN-gXr" secondAttribute="bottom" constant="5" id="A1P-Fk-R6W"/>
-                                                <constraint firstItem="9uG-QB-qC2" firstAttribute="top" secondItem="FN1-An-3Pn" secondAttribute="bottom" constant="8" symbolic="YES" id="Aqp-JT-tSh"/>
+                                                <constraint firstItem="9uG-QB-qC2" firstAttribute="top" secondItem="FN1-An-3Pn" secondAttribute="bottom" constant="1" id="Aqp-JT-tSh"/>
                                                 <constraint firstAttribute="trailing" secondItem="0gq-KN-gXr" secondAttribute="trailing" constant="48" id="Eru-wd-zFw"/>
                                                 <constraint firstAttribute="bottom" secondItem="bFo-P2-jPK" secondAttribute="bottom" id="Ink-M4-xl6"/>
                                                 <constraint firstItem="9uG-QB-qC2" firstAttribute="leading" secondItem="hNo-KG-PAC" secondAttribute="leading" id="LGI-9Z-XdF"/>
@@ -130,7 +130,7 @@
                                                 <constraint firstItem="bFo-P2-jPK" firstAttribute="top" secondItem="kqJ-1V-XfE" secondAttribute="top" id="gRJ-ms-wJ5"/>
                                                 <constraint firstItem="bFo-P2-jPK" firstAttribute="leading" secondItem="kqJ-1V-XfE" secondAttribute="leading" id="hG1-XK-2Zb"/>
                                                 <constraint firstItem="9uG-QB-qC2" firstAttribute="trailing" secondItem="hNo-KG-PAC" secondAttribute="trailing" constant="-10" id="k7a-BS-Brr"/>
-                                                <constraint firstItem="hNo-KG-PAC" firstAttribute="top" secondItem="9uG-QB-qC2" secondAttribute="bottom" constant="15" id="ka8-jK-bb5"/>
+                                                <constraint firstItem="hNo-KG-PAC" firstAttribute="top" secondItem="9uG-QB-qC2" secondAttribute="bottom" constant="8" id="ka8-jK-bb5"/>
                                                 <constraint firstItem="FN1-An-3Pn" firstAttribute="trailing" secondItem="9uG-QB-qC2" secondAttribute="trailing" id="lBm-pn-mNi"/>
                                                 <constraint firstItem="FN1-An-3Pn" firstAttribute="leading" secondItem="9uG-QB-qC2" secondAttribute="leading" id="pc4-qH-zw7"/>
                                             </constraints>
@@ -155,9 +155,9 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BTC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4k0-sv-ptn">
-                                                                    <rect key="frame" x="273" y="0.0" width="50" height="49"/>
+                                                                    <rect key="frame" x="253" y="0.0" width="70" height="49"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="width" constant="50" id="uDa-Dg-xA5"/>
+                                                                        <constraint firstAttribute="width" constant="70" id="uDa-Dg-xA5"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
                                                                     <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -295,13 +295,12 @@
                                                                 <constraint firstAttribute="height" constant="1" id="0ri-i9-DMh"/>
                                                             </constraints>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Banking the unbanked." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i0r-X4-bRL" userLabel="W 85th St, New York, 10024">
-                                                            <rect key="frame" x="79" y="36" width="234" height="32"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Banking the unbanked." lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.90000000000000002" translatesAutoresizingMaskIntoConstraints="NO" id="i0r-X4-bRL" userLabel="W 85th St, New York, 10024">
+                                                            <rect key="frame" x="79" y="28" width="234" height="49"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="32" id="vgh-Ke-cXk"/>
+                                                                <constraint firstAttribute="height" constant="49" id="vgh-Ke-cXk"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <fontDescription key="fontDescription" type="italicSystem" pointSize="19"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -452,7 +451,6 @@
                                     <outlet property="descriptionVotes" destination="VUX-3c-E10" id="Ge1-JS-W19"/>
                                     <outlet property="foregroundView" destination="kqJ-1V-XfE" id="P1n-5u-GFZ"/>
                                     <outlet property="foregroundViewTop" destination="9Wq-uG-KA2" id="Z3u-ZU-1cm"/>
-                                    <outlet property="openNumberLabel" destination="wIc-DK-Slc" id="ktS-M8-BoZ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

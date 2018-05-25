@@ -21,9 +21,12 @@ final class CoinModel: StaticMappable {
     @objc dynamic var name: String = ""
     @objc dynamic var purpose: String = ""
     @objc dynamic var symbol: String = ""
+    @objc dynamic var description: String = ""
+    @objc dynamic var grade: String = ""
     @objc dynamic var totalPoints: NSNumber = 0
     @objc dynamic var type: String = ""
     @objc dynamic var voteCount: NSNumber = 0
+    @objc dynamic var index: NSNumber = 0
     @objc dynamic var voteToday: NSNumber = 0
     
     
@@ -38,8 +41,11 @@ final class CoinModel: StaticMappable {
         self.created <- map["created"]
         self.logoImage <- map["logo_image"]
         self.name <- map["name"]
+        self.description <- map["description"]
+        self.grade <- map["grade"]
         self.purpose <- map["purpose"]
         self.symbol <- map["symbol"]
+        self.index <- map["index"]
         self.totalPoints <- map["total_points"]
         self.type <- map["type"]
         self.voteCount <- map["vote_count"]

@@ -22,6 +22,7 @@ class MasterViewController: UITableViewController {
     let kOpenCellHeight: CGFloat = 488
     let kRowsCount = 10
     var cellHeights: [CGFloat] = []
+    var service: CoinService?
     
     struct CoinInfo {
         var userId: String
@@ -62,7 +63,8 @@ class MasterViewController: UITableViewController {
             
                 if let result = task?.result {
                     let service = CoinService(JSONString: result as! String)
-                    self.setUpTable(service: service!)
+                    self.service = service!
+                    self.refreshHandler()
                 }
                 
                 return nil
@@ -116,12 +118,6 @@ class MasterViewController: UITableViewController {
                 return nil
             }
         }
-    }
-    
-    private func setUpTable(service : CoinService) {
-        print("coins: \(service.items!.count)")
-        print("coins[0]: \(service.items![0].id)")
-        print("coins[0]: \(service.items![0].backgroundImage)")
     }
     
     private func setup() {
@@ -190,16 +186,32 @@ class MasterViewController: UITableViewController {
         } else {
             cell.unfold(true, animated: false, completion: nil)
         }
-        
-        cell.number = indexPath.row
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FoldingCell", for: indexPath) as! FoldingCell
+        let cell: DemoCell = tableView.dequeueReusableCell(withIdentifier: "FoldingCell", for: indexPath) as! DemoCell
         let durations: [TimeInterval] = [0.26, 0.2, 0.2]
         cell.containerView.layer.cornerRadius = 2
         cell.durationsForExpandedState = durations
         cell.durationsForCollapsedState = durations
+        
+        if let items = service?.items {
+            cell.containerName.text = items[indexPath.row].name
+            cell.containerSlogan.text = items[indexPath.row].purpose
+            cell.containerText.text = items[indexPath.row].description
+            cell.containerGrade.text = items[indexPath.row].grade
+            cell.containerRank.text = items[indexPath.row].index.stringValue
+            cell.containerVotes.text = items[indexPath.row].totalPoints.stringValue
+            
+            cell.descriptionName.text = items[indexPath.row].name
+            cell.descriptionSymbol.text = items[indexPath.row].symbol
+            cell.descriptionSlogan.text = items[indexPath.row].purpose
+            cell.descriptionGrade.text = items[indexPath.row].grade
+            cell.descriptionRank.text = items[indexPath.row].index.stringValue
+            cell.descriptionVotes.text = items[indexPath.row].totalPoints.stringValue
+            cell.descriptionText.text = items[indexPath.row].description
+        }
+        
         return cell
     }
     

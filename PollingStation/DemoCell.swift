@@ -12,7 +12,6 @@ import UIKit
 
 class DemoCell: FoldingCell {
 
-    @IBOutlet var openNumberLabel: UILabel!
     @IBOutlet var containerRank: UILabel!
     @IBOutlet var containerGrade: UILabel!
     @IBOutlet var containerVotes: UILabel!
@@ -29,12 +28,6 @@ class DemoCell: FoldingCell {
     @IBOutlet var descriptionSymbol: UILabel!
     @IBOutlet var descriptionToday: UILabel!
     
-
-    var number: Int = 1 {
-        didSet {
-            openNumberLabel.text = "1"
-        }
-    }
 
     override func awakeFromNib() {
         foregroundView.layer.cornerRadius = 10
