@@ -11,4 +11,5 @@ target :'PollingStation' do
     pod 'AWSPinpoint', '~> 2.6.13'
     pod 'FoldingCell', '~> 3.0.6'
     pod 'Alertift', '~> 3.0'
+    pod 'SwiftyJSON', '~> 4.1.0'
 end

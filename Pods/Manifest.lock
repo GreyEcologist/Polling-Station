@@ -22,6 +22,7 @@ PODS:
     - AWSAuthCore (= 2.6.17)
     - AWSCognitoIdentityProvider (= 2.6.17)
   - FoldingCell (3.0.6)
+  - SwiftyJSON (4.1.0)
 
 DEPENDENCIES:
   - Alertift (~> 3.0)
@@ -33,6 +34,7 @@ DEPENDENCIES:
   - AWSPinpoint (~> 2.6.13)
   - AWSUserPoolsSignIn (~> 2.6.13)
   - FoldingCell (~> 3.0.6)
+  - SwiftyJSON (~> 4.1.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -48,6 +50,7 @@ SPEC REPOS:
     - AWSPinpoint
     - AWSUserPoolsSignIn
     - FoldingCell
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alertift: df0df24a557e47360180092f5f3fceb675c96b51
@@ -62,7 +65,8 @@ SPEC CHECKSUMS:
   AWSPinpoint: e00eaa2a04a1c8176f1481391b32e43279471dd1
   AWSUserPoolsSignIn: ba2e21e15527ba955194031fd40f02e1490630fe
   FoldingCell: 4848ec8a2056d5751bfb710df14521fc64d48ad7
+  SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: 5a10fcc0e42b0788249c01fa14bdb8d81b20f545
+PODFILE CHECKSUM: 3002156efb437504273ac7b8e27ff428b21dc448
 
 COCOAPODS: 1.5.2

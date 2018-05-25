@@ -19,8 +19,22 @@ class MasterViewController: UITableViewController {
     var objects = [Any]()
     let kCloseCellHeight: CGFloat = 179
     let kOpenCellHeight: CGFloat = 488
-    let kRowsCount = 20
+    let kRowsCount = 10
     var cellHeights: [CGFloat] = []
+    
+    struct CoinInfo {
+        var userId: String
+        var backgroundImage: String
+        var created: String
+        var logoImage: String
+        var name: String
+        var purpose: String
+        var symbol: String
+        var totalPoints: NSNumber
+        var type: String
+        var voteCount: NSNumber
+        var voteToday: NSNumber
+    }
     
 
     override func viewDidLoad() {
@@ -47,7 +61,7 @@ class MasterViewController: UITableViewController {
                 }
                 
                 if let result = task?.result {
-                    //print("result: \(result.debugDescription)")
+                    print(result)
                 }
                 return nil
             }
@@ -59,6 +73,7 @@ class MasterViewController: UITableViewController {
                 }
                 
                 if let result = task?.result {
+                    let myData = task.result as! String
                     //print("result: \(result.debugDescription)")
                 }
                 return nil
@@ -95,7 +110,7 @@ class MasterViewController: UITableViewController {
                 }
                 
                 if let result = task?.result {
-                    print("result: \(result.debugDescription)")
+                    //print("result: \(result.debugDescription)")
                 }
                 return nil
             }
