@@ -70,41 +70,41 @@ class MasterViewController: UITableViewController {
                 return nil
             }
 
-            client.updatecoinsPost(userId: "0001", points: "100", id: "0002").continueWith{ (task: AWSTask?) -> AnyObject? in
-                if let error = task?.error {
-                    print("Error occurred: \(error)")
-                    return nil
-                }
-                
-                if let result = task?.result {
-                    //
-                }
-                return nil
-            }
-            
-            client.getvotesGet(id: identityManager.identityId!).continueWith{ (task: AWSTask?) -> AnyObject? in
-                if let error = task?.error {
-                    print("Error occurred: \(error)")
-                    return nil
-                }
-                
-                if let result = task?.result {
-                    //print("result: \(result.debugDescription)")
-                }
-                return nil
-            }
-            
-            client.createuserPost(userid: identityManager.identityId!).continueWith{ (task: AWSTask?) -> AnyObject? in
-                if let error = task?.error {
-                    print("Error occurred: \(error)")
-                    return nil
-                }
-                
-                if let result = task?.result {
-                    //print("result: \(result.debugDescription)")
-                }
-                return nil
-            }
+//            client.updatecoinsPost(userId: "0001", points: "100", id: "0002").continueWith{ (task: AWSTask?) -> AnyObject? in
+//                if let error = task?.error {
+//                    print("Error occurred: \(error)")
+//                    return nil
+//                }
+//                
+//                if let result = task?.result {
+//                    //
+//                }
+//                return nil
+//            }
+//            
+//            client.getvotesGet(id: identityManager.identityId!).continueWith{ (task: AWSTask?) -> AnyObject? in
+//                if let error = task?.error {
+//                    print("Error occurred: \(error)")
+//                    return nil
+//                }
+//                
+//                if let result = task?.result {
+//                    //print("result: \(result.debugDescription)")
+//                }
+//                return nil
+//            }
+//            
+//            client.createuserPost(userid: identityManager.identityId!).continueWith{ (task: AWSTask?) -> AnyObject? in
+//                if let error = task?.error {
+//                    print("Error occurred: \(error)")
+//                    return nil
+//                }
+//                
+//                if let result = task?.result {
+//                    //print("result: \(result.debugDescription)")
+//                }
+//                return nil
+//            }
         }
     }
     
