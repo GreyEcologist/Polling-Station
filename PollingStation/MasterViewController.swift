@@ -42,7 +42,10 @@ class MasterViewController: UITableViewController {
         super.viewDidLoad()
         
         NotificationCenter.default.addObserver(self, selector: #selector(setToPeru(notification:)), name: .voteAlert, object: nil)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "$", style: .plain, target: self, action: #selector(addTapped))
+        
+        let leftButton = UIBarButtonItem(title: "Edit", style: .plain, target: self, action: #selector(addTapped))
+        self.navigationItem.leftBarButtonItem = leftButton
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "$$$$", style: .plain, target: self, action: #selector(addTapped))
         
         if !AWSSignInManager.sharedInstance().isLoggedIn {
             AWSAuthUIViewController.presentViewController(with: self.navigationController!, configuration: nil, completionHandler: { (provider: AWSSignInProvider, error: Error?) in
