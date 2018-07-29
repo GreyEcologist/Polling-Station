@@ -45,7 +45,7 @@
             </objects>
             <point key="canvasLocation" x="-1063" y="-458"/>
         </scene>
-        <!--The Polling Station-->
+        <!--Title-->
         <scene sceneID="Nxf-mB-TDH">
             <objects>
                 <tableViewController storyboardIdentifier="TableViewController" id="aWt-1y-vi0" customClass="MasterViewController" customModule="PollingStation" customModuleProvider="target" sceneMemberID="viewController">
@@ -485,8 +485,7 @@
                         </connections>
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="Item" id="rZj-G7-yLB"/>
-                    <navigationItem key="navigationItem" title="The Polling Station" id="HQR-1J-vGa"/>
+                    <navigationItem key="navigationItem" title="Title" id="K9E-JY-T8l"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I4E-Ni-bAu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
