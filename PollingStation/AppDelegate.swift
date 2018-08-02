@@ -22,7 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         pinpoint = AWSPinpoint(configuration: AWSPinpointConfiguration.defaultPinpointConfiguration(launchOptions: launchOptions))
         let configurationAnonymous = AWSServiceConfiguration(region: .USEast1, credentialsProvider: AWSAnonymousCredentialsProvider())
         SUPCoinGateClient.registerClient(withConfiguration: configurationAnonymous!, forKey: "anonymousAccess")
-        
         return AWSMobileClient.sharedInstance().interceptApplication(application, didFinishLaunchingWithOptions:launchOptions)
     }
     
