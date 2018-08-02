@@ -43,8 +43,6 @@ class MasterViewController: UITableViewController {
         
         NotificationCenter.default.addObserver(self, selector: #selector(setToPeru(notification:)), name: .voteAlert, object: nil)
         
-        //navigationController!.isNavigationBarHidden = false
-        
         if !AWSSignInManager.sharedInstance().isLoggedIn {
             AWSAuthUIViewController.presentViewController(with: self.navigationController!, configuration: nil, completionHandler: { (provider: AWSSignInProvider, error: Error?) in
                 if error != nil {
