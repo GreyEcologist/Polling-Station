@@ -508,13 +508,13 @@
         <!--Balance-->
         <scene sceneID="mqe-XV-s41">
             <objects>
-                <tableViewController id="jnr-dT-ipC" sceneMemberID="viewController">
+                <tableViewController id="jnr-dT-ipC" customClass="BalanceViewController" customModule="PollingStation" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="X1E-eD-L3f">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="GtY-dj-s7c">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="GtY-dj-s7c">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GtY-dj-s7c" id="PHX-2b-uZT">
@@ -531,6 +531,9 @@
                     <navigationItem key="navigationItem" title="Balance" id="aAp-Do-d5K">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="C2s-Ki-HEn">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="backTapped" destination="jnr-dT-ipC" id="HDI-tE-i7L"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>

@@ -53,7 +53,7 @@ class MasterViewController: UITableViewController {
             self.setup()
             
             let identityManager = AWSIdentityManager.default()
-            let client: SUPCoinGateClient = SUPCoinGateClient.default()
+            let client: BALCoinGateClient = BALCoinGateClient.default()
             client.apiKey = "tHDIsk3QOp8ri94CKARO087WmI0QhYFW35otTCh7"
             client.getallcoinsGet().continueWith{ (task: AWSTask?) -> AnyObject? in
                 if let error = task?.error {
@@ -108,10 +108,6 @@ class MasterViewController: UITableViewController {
         }
     }
     
-    @IBAction func addTapped() {
-        
-    }
-    
     private func setup() {
         cellHeights = Array(repeating: kCloseCellHeight, count: kRowsCount)
         tableView.estimatedRowHeight = kCloseCellHeight
@@ -143,7 +139,7 @@ class MasterViewController: UITableViewController {
     
     func userVote() {
         let identityManager = AWSIdentityManager.default()
-        let client: SUPCoinGateClient = SUPCoinGateClient.default()
+        let client: BALCoinGateClient = BALCoinGateClient.default()
         client.apiKey = "tHDIsk3QOp8ri94CKARO087WmI0QhYFW35otTCh7"
         client.usertokenvotePost(userid: identityManager.identityId!).continueWith{ (task: AWSTask?) -> AnyObject? in
             if let error = task?.error {
