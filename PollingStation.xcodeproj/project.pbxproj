@@ -15,10 +15,11 @@
 		003AFEDA20B09CA5002A74A6 /* CoinDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003AFED920B09CA5002A74A6 /* CoinDB.swift */; };
 		003AFEDC20B09CB7002A74A6 /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 003AFEDB20B09CB7002A74A6 /* awsconfiguration.json */; };
 		003AFEE920B3375B002A74A6 /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003AFEE820B3375B002A74A6 /* Empty.swift */; };
+		0054C2072117983B00CDA1AC /* TRUCoinGateClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0054C2062117983B00CDA1AC /* TRUCoinGateClient.swift */; };
+		0054C20921179C1000CDA1AC /* BalanceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0054C20821179C1000CDA1AC /* BalanceModel.swift */; };
 		0060658B209FD65D004BBC44 /* DemoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0060658A209FD65D004BBC44 /* DemoCell.swift */; };
 		00C88B9620B80FAB00B02B36 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C88B9520B80FAB00B02B36 /* Services.swift */; };
 		00C88B9820B8103D00B02B36 /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C88B9720B8103C00B02B36 /* CoinModel.swift */; };
-		00C8F0BC2112D0FF00DF05CC /* BALCoinGateClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C8F0BB2112D0FF00DF05CC /* BALCoinGateClient.swift */; };
 		00C8F0C02112D20A00DF05CC /* BalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C8F0BF2112D20A00DF05CC /* BalanceViewController.swift */; };
 		99495357F6417BC5892C4781 /* Pods_PollingStation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D54E60DC4343488FA7332C7 /* Pods_PollingStation.framework */; };
 /* End PBXBuildFile section */
@@ -35,10 +36,11 @@
 		003AFEDB20B09CB7002A74A6 /* awsconfiguration.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = awsconfiguration.json; sourceTree = "<group>"; };
 		003AFEE320B3331E002A74A6 /* AWSApiGatewayBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AWSApiGatewayBridge.h; sourceTree = "<group>"; };
 		003AFEE820B3375B002A74A6 /* Empty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Empty.swift; sourceTree = "<group>"; };
+		0054C2062117983B00CDA1AC /* TRUCoinGateClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TRUCoinGateClient.swift; sourceTree = "<group>"; };
+		0054C20821179C1000CDA1AC /* BalanceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceModel.swift; sourceTree = "<group>"; };
 		0060658A209FD65D004BBC44 /* DemoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoCell.swift; sourceTree = "<group>"; };
 		00C88B9520B80FAB00B02B36 /* Services.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
 		00C88B9720B8103C00B02B36 /* CoinModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
-		00C8F0BB2112D0FF00DF05CC /* BALCoinGateClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BALCoinGateClient.swift; sourceTree = "<group>"; };
 		00C8F0BF2112D20A00DF05CC /* BalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewController.swift; sourceTree = "<group>"; };
 		00CD16E220A8F895004C236C /* PollingStation-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PollingStation-Bridging-Header.h"; sourceTree = "<group>"; };
 		1AA6F6066C77AE0A6ABE8406 /* Pods-PollingStation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PollingStation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PollingStation/Pods-PollingStation.debug.xcconfig"; sourceTree = "<group>"; };
@@ -84,11 +86,12 @@
 				00C8F0BF2112D20A00DF05CC /* BalanceViewController.swift */,
 				00C88B9520B80FAB00B02B36 /* Services.swift */,
 				00C88B9720B8103C00B02B36 /* CoinModel.swift */,
+				0054C20821179C1000CDA1AC /* BalanceModel.swift */,
 				003AFED920B09CA5002A74A6 /* CoinDB.swift */,
 				0060658A209FD65D004BBC44 /* DemoCell.swift */,
+				0054C2062117983B00CDA1AC /* TRUCoinGateClient.swift */,
 				003AFEE320B3331E002A74A6 /* AWSApiGatewayBridge.h */,
 				00CD16E220A8F895004C236C /* PollingStation-Bridging-Header.h */,
-				00C8F0BB2112D0FF00DF05CC /* BALCoinGateClient.swift */,
 				003AFEE820B3375B002A74A6 /* Empty.swift */,
 				000F52C7209E940C00273B33 /* Main.storyboard */,
 				000F52CA209E940F00273B33 /* Assets.xcassets */,
@@ -259,11 +262,12 @@
 				00C8F0C02112D20A00DF05CC /* BalanceViewController.swift in Sources */,
 				000F52C4209E940C00273B33 /* MasterViewController.swift in Sources */,
 				003AFEDA20B09CA5002A74A6 /* CoinDB.swift in Sources */,
-				00C8F0BC2112D0FF00DF05CC /* BALCoinGateClient.swift in Sources */,
 				003AFEE920B3375B002A74A6 /* Empty.swift in Sources */,
+				0054C20921179C1000CDA1AC /* BalanceModel.swift in Sources */,
 				00C88B9820B8103D00B02B36 /* CoinModel.swift in Sources */,
 				00C88B9620B80FAB00B02B36 /* Services.swift in Sources */,
 				0060658B209FD65D004BBC44 /* DemoCell.swift in Sources */,
+				0054C2072117983B00CDA1AC /* TRUCoinGateClient.swift in Sources */,
 				000F52C2209E940C00273B33 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

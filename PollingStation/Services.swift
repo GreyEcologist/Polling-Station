@@ -19,3 +19,23 @@ final class CoinService: NSObject, Mappable {
         items <- map["Items"]
     }
 }
+
+final class BalanceService: NSObject, Mappable {
+    var data: PSData?
+    
+    required init?(map: Map) {}
+    
+    func mapping(map: Map) {
+        data <- map["data"]
+    }
+}
+
+final class PSData: NSObject, Mappable {
+    var transactions: [BalanceModel]?
+    
+    required init?(map: Map) {}
+    
+    func mapping(map: Map) {
+        transactions <- map["transactions"]
+    }
+}

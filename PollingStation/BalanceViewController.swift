@@ -7,15 +7,52 @@
 //
 
 import UIKit
+import AWSAuthCore
+import AWSAuthUI
+import SwiftyJSON
 
 class BalanceViewController: UITableViewController {
     
+     var service: BalanceService?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.userVote()
+    }
+    
+    func userVote() {
+        let client: TRUCoinGateClient = TRUCoinGateClient.default()
+        client.apiKey = "tHDIsk3QOp8ri94CKARO087WmI0QhYFW35otTCh7"
+        client.getbalancePost(id: "0001").continueWith{ (task: AWSTask?) -> AnyObject? in
+            if let error = task?.error {
+                print("usertoken Error occurred: \(error)")
+                return nil
+            }
+            
+            if let result = task?.result {
+                let service = BalanceService(JSONString: result as! String)
+                self.service = service!
+                print("A: \(result))")
+                print("B: \(self.service!.data!.transactions!.count)")
+                //self.refreshHandler()
+            }
+            return nil
+        }
     }
     
     @IBAction func backTapped() {
         navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func refreshHandler() {
+        let deadlineTime = DispatchTime.now() + .seconds(1)
+        DispatchQueue.main.asyncAfter(deadline: deadlineTime, execute: { [weak self] in
+            if #available(iOS 10.0, *) {
+                self?.tableView.refreshControl?.endRefreshing()
+            }
+            self?.tableView.reloadData()
+        })
     }
     
     // MARK: - Table View

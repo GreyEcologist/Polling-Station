@@ -52,8 +52,7 @@ class MasterViewController: UITableViewController {
         } else {
             self.setup()
             
-            let identityManager = AWSIdentityManager.default()
-            let client: BALCoinGateClient = BALCoinGateClient.default()
+            let client: TRUCoinGateClient = TRUCoinGateClient.default()
             client.apiKey = "tHDIsk3QOp8ri94CKARO087WmI0QhYFW35otTCh7"
             client.getallcoinsGet().continueWith{ (task: AWSTask?) -> AnyObject? in
                 if let error = task?.error {
@@ -139,7 +138,7 @@ class MasterViewController: UITableViewController {
     
     func userVote() {
         let identityManager = AWSIdentityManager.default()
-        let client: BALCoinGateClient = BALCoinGateClient.default()
+        let client: TRUCoinGateClient = TRUCoinGateClient.default()
         client.apiKey = "tHDIsk3QOp8ri94CKARO087WmI0QhYFW35otTCh7"
         client.usertokenvotePost(userid: identityManager.identityId!).continueWith{ (task: AWSTask?) -> AnyObject? in
             if let error = task?.error {
