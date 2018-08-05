@@ -505,7 +505,7 @@
             </objects>
             <point key="canvasLocation" x="-311.19999999999999" y="-458.32083958020991"/>
         </scene>
-        <!--Balance-->
+        <!--Wallet-->
         <scene sceneID="mqe-XV-s41">
             <objects>
                 <tableViewController id="jnr-dT-ipC" customClass="BalanceViewController" customModule="PollingStation" customModuleProvider="target" sceneMemberID="viewController">
@@ -528,7 +528,7 @@
                             <outlet property="delegate" destination="jnr-dT-ipC" id="8Ug-z5-1nx"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Balance" id="aAp-Do-d5K">
+                    <navigationItem key="navigationItem" title="Wallet" id="aAp-Do-d5K">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="C2s-Ki-HEn">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
