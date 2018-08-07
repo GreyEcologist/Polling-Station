@@ -549,7 +549,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="100" id="bLO-Eq-US2">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="100" id="bLO-Eq-US2" customClass="TransactionCell" customModule="PollingStation" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="78" width="375" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bLO-Eq-US2" id="hhr-RJ-rh9">
@@ -616,6 +616,11 @@
                                         <constraint firstItem="2y4-9L-acF" firstAttribute="trailing" secondItem="Uts-IB-SxQ" secondAttribute="trailing" id="vCz-9B-JJI"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="amountLabel" destination="z5E-FY-Xvq" id="gg6-MX-7Ca"/>
+                                    <outlet property="dateLabel" destination="2y4-9L-acF" id="DDf-wT-B6t"/>
+                                    <outlet property="statusLabel" destination="Uts-IB-SxQ" id="d84-cL-C3N"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

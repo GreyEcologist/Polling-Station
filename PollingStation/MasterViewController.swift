@@ -16,8 +16,8 @@ import SwiftyJSON
 
 fileprivate struct C {
     struct CellHeight {
-        static let close: CGFloat = 179 // equal or greater foregroundView height
-        static let open: CGFloat = 488 // equal or greater containerView height
+        static let close: CGFloat = 179
+        static let open: CGFloat = 488
     }
 }
 
