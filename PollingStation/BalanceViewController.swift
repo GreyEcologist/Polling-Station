@@ -13,7 +13,8 @@ import SwiftyJSON
 
 class BalanceViewController: UITableViewController {
     
-     var service: BalanceService?
+    var service: BalanceService?
+    var rowsCount = 10
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +34,8 @@ class BalanceViewController: UITableViewController {
             if let result = task?.result {
                 let service = BalanceService(JSONString: result as! String)
                 self.service = service!
-                print("A: \(result))")
-                print("B: \(self.service!.data!.transactions!.count)")
-                //self.refreshHandler()
+                self.rowsCount = self.service!.data!.transactions!.count
+                self.refreshHandler()
             }
             return nil
         }
@@ -68,11 +68,11 @@ class BalanceViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 { return 1}
-        else { return 10 }
+        else { return rowsCount }
     }
     
     override func tableView(_: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
+        return 100
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
