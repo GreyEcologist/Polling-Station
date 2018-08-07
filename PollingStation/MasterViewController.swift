@@ -14,6 +14,13 @@ import AWSDynamoDB
 import Alertift
 import SwiftyJSON
 
+fileprivate struct C {
+    struct CellHeight {
+        static let close: CGFloat = 179 // equal or greater foregroundView height
+        static let open: CGFloat = 488 // equal or greater containerView height
+    }
+}
+
 
 class MasterViewController: UITableViewController {
 
@@ -21,7 +28,7 @@ class MasterViewController: UITableViewController {
     let kCloseCellHeight: CGFloat = 179
     let kOpenCellHeight: CGFloat = 488
     let kRowsCount = 10
-    var cellHeights: [CGFloat] = []
+    var cellHeights = (0..<10).map { _ in C.CellHeight.close }
     var service: CoinService?
     
     struct CoinInfo {
@@ -185,7 +192,7 @@ class MasterViewController: UITableViewController {
         
         cell.backgroundColor = .clear
         
-        if cellHeights[indexPath.row] == kCloseCellHeight {
+        if cellHeights[indexPath.row] == C.CellHeight.close {
             cell.unfold(false, animated: false, completion: nil)
         } else {
             cell.unfold(true, animated: false, completion: nil)

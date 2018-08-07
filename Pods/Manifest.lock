@@ -21,7 +21,7 @@ PODS:
   - AWSUserPoolsSignIn (2.6.17):
     - AWSAuthCore (= 2.6.17)
     - AWSCognitoIdentityProvider (= 2.6.17)
-  - FoldingCell (3.0.6)
+  - FoldingCell (3.1.4)
   - ObjectMapper (3.1.0)
   - SwiftyJSON (4.1.0)
 
@@ -34,8 +34,8 @@ DEPENDENCIES:
   - AWSMobileClient (~> 2.6.13)
   - AWSPinpoint (~> 2.6.13)
   - AWSUserPoolsSignIn (~> 2.6.13)
-  - FoldingCell (~> 3.0.6)
-  - ObjectMapper
+  - FoldingCell (~> 3.1.4)
+  - ObjectMapper (~> 3.1.0)
   - SwiftyJSON (~> 4.1.0)
 
 SPEC REPOS:
@@ -67,10 +67,10 @@ SPEC CHECKSUMS:
   AWSMobileClient: 7b8dd4ef7a7d5c08f258b547d061c3c2018d32d8
   AWSPinpoint: e00eaa2a04a1c8176f1481391b32e43279471dd1
   AWSUserPoolsSignIn: ba2e21e15527ba955194031fd40f02e1490630fe
-  FoldingCell: 4848ec8a2056d5751bfb710df14521fc64d48ad7
+  FoldingCell: 5f8a482ce0502bc0d5a1732782c305e0cefe6f81
   ObjectMapper: 20505058f54e5c3ca69e1d6de9897d152a5369a6
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
 
-PODFILE CHECKSUM: 2a3b712037dff7ccb19571119e36e517c69fe975
+PODFILE CHECKSUM: 66a6e4837f04a92619c6974d3bc74cd3c4a264fb
 
 COCOAPODS: 1.5.2
