@@ -14,11 +14,11 @@ import SwiftyJSON
 class BalanceViewController: UITableViewController {
     
     var service: BalanceService?
-    var rowsCount = 10
+    var transactions: [BalanceModel]?
+    var rowsCount = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.userVote()
     }
     
@@ -27,13 +27,13 @@ class BalanceViewController: UITableViewController {
         client.apiKey = "tHDIsk3QOp8ri94CKARO087WmI0QhYFW35otTCh7"
         client.getbalancePost(id: "0001").continueWith{ (task: AWSTask?) -> AnyObject? in
             if let error = task?.error {
-                print("usertoken Error occurred: \(error)")
                 return nil
             }
             
             if let result = task?.result {
                 let service = BalanceService(JSONString: result as! String)
                 self.service = service!
+                self.transactions = self.service!.data!.transactions!
                 self.rowsCount = self.service!.data!.transactions!.count
                 self.refreshHandler()
             }
@@ -81,7 +81,14 @@ class BalanceViewController: UITableViewController {
             let cell = tableView.dequeueReusableCell(withIdentifier: "BalanceCell", for: indexPath)
             return cell
         } else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TransactionCell
+            if rowsCount > 0
+            {
+                let transaction = self.transactions![indexPath.row]
+                cell.amountLabel.text = transaction.amount
+                cell.statusLabel.text = transaction.status
+                cell.dateLabel.text = transaction.time
+            }
             return cell
         }
     }
