@@ -14,27 +14,42 @@ import SwiftyJSON
 class BalanceViewController: UITableViewController {
     
     var service: BalanceService?
+    var wallet: WalletService?
+    var balance: PSBalance?
     var transactions: [BalanceModel]?
     var rowsCount = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.userVote()
+        self.userBalance()
     }
     
     func userVote() {
         let client: BARCoinGateClient = BARCoinGateClient.default()
         client.apiKey = "tHDIsk3QOp8ri94CKARO087WmI0QhYFW35otTCh7"
         client.getbalancePost(id: "0001").continueWith{ (task: AWSTask?) -> AnyObject? in
-            if let error = task?.error {
-                return nil
-            }
-            
+            if let error = task?.error { return nil }
             if let result = task?.result {
                 let service = BalanceService(JSONString: result as! String)
                 self.service = service!
                 self.transactions = self.service!.data!.transactions!
                 self.rowsCount = self.service!.data!.transactions!.count
+                self.refreshHandler()
+            }
+            return nil
+        }
+    }
+    
+    func userBalance() {
+        let client: BARCoinGateClient = BARCoinGateClient.default()
+        client.apiKey = "tHDIsk3QOp8ri94CKARO087WmI0QhYFW35otTCh7"
+        client.tokenbalanceGet(id: "0001").continueWith{ (task: AWSTask?) -> AnyObject? in
+            if let error = task?.error { return nil }
+            if let result = task?.result {
+                let wallet = WalletService(JSONString: result as! String)
+                self.wallet = wallet!
+                self.balance = self.wallet!.data!.balance!
                 self.refreshHandler()
             }
             return nil
@@ -78,7 +93,10 @@ class BalanceViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "BalanceCell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "BalanceCell", for: indexPath) as! WalletCell
+            if self.balance != nil {
+                cell.amountLabel.text = self.balance!.available_balance!
+            }
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! TransactionCell

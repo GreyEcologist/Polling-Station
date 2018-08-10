@@ -17,3 +17,11 @@ class TransactionCell: UITableViewCell {
         super.awakeFromNib()
     }
 }
+
+class WalletCell: UITableViewCell {
+    @IBOutlet weak var amountLabel: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+}
