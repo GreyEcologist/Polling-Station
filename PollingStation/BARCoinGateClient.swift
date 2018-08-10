@@ -17,12 +17,12 @@
 import AWSCore
 import AWSAPIGateway
 
-public class TRUCoinGateClient: AWSAPIGatewayClient {
+public class BARCoinGateClient: AWSAPIGatewayClient {
 
-	static let AWSInfoClientKey = "TRUCoinGateClient"
+	static let AWSInfoClientKey = "BARCoinGateClient"
 
 	private static let _serviceClients = AWSSynchronizedMutableDictionary()
-	private static let _defaultClient:TRUCoinGateClient = {
+	private static let _defaultClient:BARCoinGateClient = {
 		var serviceConfiguration: AWSServiceConfiguration? = nil
         let serviceInfo = AWSInfo.default().defaultServiceInfo(AWSInfoClientKey)
         if let serviceInfo = serviceInfo {
@@ -33,7 +33,7 @@ public class TRUCoinGateClient: AWSAPIGatewayClient {
             serviceConfiguration = AWSServiceConfiguration(region: .Unknown, credentialsProvider: nil)
         }
         
-        return TRUCoinGateClient(configuration: serviceConfiguration!)
+        return BARCoinGateClient(configuration: serviceConfiguration!)
 	}()
     
 	/**
@@ -51,14 +51,14 @@ public class TRUCoinGateClient: AWSAPIGatewayClient {
 	
 	 Then call the following to get the default service client:
 	
-	     let serviceClient = TRUCoinGateClient.default()
+	     let serviceClient = BARCoinGateClient.default()
 
-     Alternatively, this configuration could also be set in the `info.plist` file of your app under `AWS` dictionary with a configuration dictionary by name `TRUCoinGateClient`.
+     Alternatively, this configuration could also be set in the `info.plist` file of your app under `AWS` dictionary with a configuration dictionary by name `BARCoinGateClient`.
 	
 	 @return The default service client.
 	 */ 
 	 
-	public class func `default`() -> TRUCoinGateClient{
+	public class func `default`() -> BARCoinGateClient{
 		return _defaultClient
 	}
 
@@ -70,7 +70,7 @@ public class TRUCoinGateClient: AWSAPIGatewayClient {
 	     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 	         let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "YourIdentityPoolId")
 	         let configuration = AWSServiceConfiguration(region: .USWest2, credentialsProvider: credentialProvider)
-	         TRUCoinGateClient.registerClient(withConfiguration: configuration, forKey: "USWest2TRUCoinGateClient")
+	         BARCoinGateClient.registerClient(withConfiguration: configuration, forKey: "USWest2BARCoinGateClient")
 	
 	         return true
 	     }
@@ -78,7 +78,7 @@ public class TRUCoinGateClient: AWSAPIGatewayClient {
 	 Then call the following to get the service client:
 	
 	
-	     let serviceClient = TRUCoinGateClient.client(forKey: "USWest2TRUCoinGateClient")
+	     let serviceClient = BARCoinGateClient.client(forKey: "USWest2BARCoinGateClient")
 	
 	 @warning After calling this method, do not modify the configuration object. It may cause unspecified behaviors.
 	
@@ -87,7 +87,7 @@ public class TRUCoinGateClient: AWSAPIGatewayClient {
 	 */
 	
 	public class func registerClient(withConfiguration configuration: AWSServiceConfiguration, forKey key: String){
-		_serviceClients.setObject(TRUCoinGateClient(configuration: configuration), forKey: key  as NSString);
+		_serviceClients.setObject(BARCoinGateClient(configuration: configuration), forKey: key  as NSString);
 	}
 
 	/**
@@ -98,21 +98,21 @@ public class TRUCoinGateClient: AWSAPIGatewayClient {
 	     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 	         let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "YourIdentityPoolId")
 	         let configuration = AWSServiceConfiguration(region: .USWest2, credentialsProvider: credentialProvider)
-	         TRUCoinGateClient.registerClient(withConfiguration: configuration, forKey: "USWest2TRUCoinGateClient")
+	         BARCoinGateClient.registerClient(withConfiguration: configuration, forKey: "USWest2BARCoinGateClient")
 	
 	         return true
 	     }
 	
 	 Then call the following to get the service client:
 	 
-	 	let serviceClient = TRUCoinGateClient.client(forKey: "USWest2TRUCoinGateClient")
+	 	let serviceClient = BARCoinGateClient.client(forKey: "USWest2BARCoinGateClient")
 	 
 	 @param key A string to identify the service client.
 	 @return An instance of the service client.
 	 */
-	public class func client(forKey key: String) -> TRUCoinGateClient {
+	public class func client(forKey key: String) -> BARCoinGateClient {
 		objc_sync_enter(self)
-		if let client: TRUCoinGateClient = _serviceClients.object(forKey: key) as? TRUCoinGateClient {
+		if let client: BARCoinGateClient = _serviceClients.object(forKey: key) as? BARCoinGateClient {
 			objc_sync_exit(self)
 		    return client
 		}
@@ -120,10 +120,10 @@ public class TRUCoinGateClient: AWSAPIGatewayClient {
 		let serviceInfo = AWSInfo.default().defaultServiceInfo(AWSInfoClientKey)
 		if let serviceInfo = serviceInfo {
 			let serviceConfiguration = AWSServiceConfiguration(region: serviceInfo.region, credentialsProvider: serviceInfo.cognitoCredentialsProvider)
-			TRUCoinGateClient.registerClient(withConfiguration: serviceConfiguration!, forKey: key)
+			BARCoinGateClient.registerClient(withConfiguration: serviceConfiguration!, forKey: key)
 		}
 		objc_sync_exit(self)
-		return _serviceClients.object(forKey: key) as! TRUCoinGateClient;
+		return _serviceClients.object(forKey: key) as! BARCoinGateClient;
 	}
 
 	/**
@@ -238,6 +238,28 @@ public class TRUCoinGateClient: AWSAPIGatewayClient {
 	    let pathParameters:[String:Any] = [:]
 	    
 	    return self.invokeHTTPRequest("GET", urlString: "/getvotes", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: Empty.self) as! AWSTask<Empty>
+	}
+
+	
+    /*
+     
+     
+     @param id 
+     
+     return type: Empty
+     */
+    public func tokenbalanceGet(id: String?) -> AWSTask<Empty> {
+	    let headerParameters = [
+                   "Content-Type": "application/json",
+                   "Accept": "application/json",
+                   "id": id!
+	            ]
+	    
+	    let queryParameters:[String:Any] = [:]
+	    
+	    let pathParameters:[String:Any] = [:]
+	    
+	    return self.invokeHTTPRequest("GET", urlString: "/tokenbalance", pathParameters: pathParameters, queryParameters: queryParameters, headerParameters: headerParameters, body: nil, responseClass: Empty.self) as! AWSTask<Empty>
 	}
 
 	

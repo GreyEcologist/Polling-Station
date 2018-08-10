@@ -39,3 +39,33 @@ final class PSData: NSObject, Mappable {
         transactions <- map["transactions"]
     }
 }
+
+final class WalletService: NSObject, Mappable {
+    var data: PSWallet?
+    
+    required init?(map: Map) {}
+    
+    func mapping(map: Map) {
+        data <- map["data"]
+    }
+}
+
+final class PSWallet: NSObject, Mappable {
+    var balance: PSBalance?
+    
+    required init?(map: Map) {}
+    
+    func mapping(map: Map) {
+        balance <- map["balance"]
+    }
+}
+
+final class PSBalance: NSObject, Mappable {
+    var available_balance: String?
+    
+    required init?(map: Map) {}
+    
+    func mapping(map: Map) {
+        available_balance <- map["available_balance"]
+    }
+}

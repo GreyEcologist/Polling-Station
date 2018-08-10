@@ -23,7 +23,7 @@ class BalanceViewController: UITableViewController {
     }
     
     func userVote() {
-        let client: TRUCoinGateClient = TRUCoinGateClient.default()
+        let client: BARCoinGateClient = BARCoinGateClient.default()
         client.apiKey = "tHDIsk3QOp8ri94CKARO087WmI0QhYFW35otTCh7"
         client.getbalancePost(id: "0001").continueWith{ (task: AWSTask?) -> AnyObject? in
             if let error = task?.error {
